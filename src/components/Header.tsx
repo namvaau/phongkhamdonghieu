@@ -34,7 +34,7 @@ const Header = () => {
                                     <li><i className="fa fa-phone" /> 097 516 11 15</li>
                                     <li>
                                         <i className="fa fa-envelope" />
-                                        <a href="mailto:pkdkdonghieu@gmail.com">pkdkdonghieu@gmail.com</a>
+                                        <a href="mailto:phongkhamdkdonghieu@gmail.com">phongkhamdkdonghieu@gmail.com</a>
                                     </li>
                                 </ul>
                             </div>
@@ -54,7 +54,7 @@ const Header = () => {
                                             alignItems: 'center'
                                         }}>
                                             <img src={logo} alt="Logo" className="round-image" />
-                                            <h6 style={{marginLeft: '10px', fontWeight: 'bold', color: '#02a25c'}}>Phòng Khám Đa Khoa <br /> Đông Hiếu</h6>
+                                            <h6 style={{marginLeft: '10px', fontWeight: 'bold', color: '#02a25c', fontSize: '19px'}}>Phòng Khám ĐK Đông Hiếu</h6>
                                         </Link>
                                     </div>
                                     <div className="col-6 d-md-none">
