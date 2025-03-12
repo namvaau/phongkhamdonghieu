@@ -278,11 +278,10 @@ Start Header CSS
 
 .mobile-nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  /* Căn giữa theo chiều dọc */
-  height: 100%;
-  /* Đảm bảo chiều cao */
+  justify-content: space-between;
+  /* Giữ logo và nút menu trên cùng 1 hàng */
+  width: 100%;
 }
 
 @media only screen and (max-width: 767px) {
@@ -332,11 +331,6 @@ Start Header CSS
   color: #333;
   transition: color 0.3s ease;
 }
-
-.mobile-menu-toggle:hover {
-  /* Màu xanh khi hover */
-}
-
 
 .mobile-menu {
   position: fixed;
@@ -484,6 +478,20 @@ Start Header CSS
   margin-top: 12px;
 }
 
+.main-menu {
+  display: flex;
+  justify-content: flex-end;
+  /* Đẩy menu về bên phải */
+}
+
+@media (max-width: 768px) {
+  .appointment-image img {
+    max-width: 80%;
+    /* Thu nhỏ ảnh xuống còn 80% */
+  }
+}
+
+
 .get-quote .btn {
   color: #fff;
 }
@@ -491,6 +499,7 @@ Start Header CSS
 .header .logo {
   float: left;
   padding: 5px 0;
+  max-width: 80%;
 }
 
 .round-image {

@@ -6,7 +6,7 @@ const Call = () => {
                     <div className="row">
                         <div className="col-lg-12 col-md-12 col-12">
                             <div className="content">
-                                <h2>Bạn cần chăm sóc y tế khẩn cấp? Gọi ngay 097 516 11 15</h2>
+                                <h2>Bạn cần chăm sóc y tế khẩn cấp? <br /> Gọi ngay 0975 161 115</h2>
                                 <p>
                                     Chúng tôi luôn sẵn sàng hỗ trợ bạn trong mọi tình huống khẩn cấp. Đội ngũ y bác sĩ giàu kinh nghiệm xử lý nhanh chóng để đảm bảo sức khỏe của bạn.
                                 </p>

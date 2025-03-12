@@ -61,16 +61,16 @@ const Header = () => {
                                                     fontWeight: 'bold',
                                                     color: '#02a25c',
                                                     fontSize: '18px',
-                                                    whiteSpace: 'nowrap' // Ngăn chữ xuống dòng
+                                                    whiteSpace: 'nowrap'
                                                 }}
                                             >
-                                                Phòng Khám ĐK Đông Hiếu
+                                                Phòng Khám Đa Khoa Đông Hiếu
                                             </h6>
                                         </Link>
                                     </div>
-                                    <div className="col-6 d-md-none">
+                                    <div className="col-4 d-md-none">
                                         <button className="mobile-menu-toggle" onClick={() => setIsOpen(!isOpen)}>
-                                            <i className="icofont-navigation-menu"></i>
+                                            <i className="icofont-navigation-menu" style={{color: '#02a25c'}}></i>
                                         </button>
                                     </div>
                                 </div>
