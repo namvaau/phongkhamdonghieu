@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link
 import logo from '../assets/img/logo.png';
-import '../assets/css/slicknav.min.css';
 
 const Header = () => {
     const [isSticky, setIsSticky] = useState(false);
