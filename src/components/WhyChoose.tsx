@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import section from '../assets/img/section-img.png'
 import ReactPlayer from "react-player";
 import Modal from "react-modal";

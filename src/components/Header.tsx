@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link
 import logo from '../assets/img/logo.png';
 import '../assets/css/slicknav.min.css';

@@ -1,4 +1,3 @@
-import React from 'react'
 import section from '../assets/img/section-img.png'
 import blog1 from '../assets/img/blog1.jpg'
 import blog2 from '../assets/img/blog2.jpg'

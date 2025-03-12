@@ -1,4 +1,4 @@
-import React from 'react'
+
 import section from '../assets/img/section-img.png'
 
 const Feautes = () => {
