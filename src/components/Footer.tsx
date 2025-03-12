@@ -52,7 +52,7 @@ const Footer = () => {
                             </div>
                             <div className="col-lg-3 col-md-6 col-12">
                                 <div className="single-footer f-link">
-                                    <h2>Quick Links</h2>
+                                    <h2>Truy Cập</h2>
                                     <div className="row">
                                         <div className="col-lg-6 col-md-6 col-12">
                                             <ul>
@@ -123,12 +123,12 @@ const Footer = () => {
                                 <div className="single-footer">
                                     <h2>Thời Gian</h2>
                                     <p>
-                                        Phòng khám làm việc tất cả các ngày trong tuần,
-                                        Cấp phát thuốc bảo hiểm ý tế từ Thứ 2 đến Thứ 7 (Trừ các ngày lễ tết)
+                                        Phòng khám làm việc tất cả các ngày trong tuần.
+                                        Khám và cấp phát thuốc bảo hiểm ý tế từ Thứ 2 đến Thứ 7 (Trừ các ngày lễ tết)
                                     </p>
                                     <ul className="time-sidual">
                                         <li className="day">
-                                            Thứ 2 - Chủ Nhật (Sáng) <span>7.30-11.30</span>
+                                            Thứ 2 - Chủ Nhật (Sáng) <span>6.30-11.30</span>
                                         </li>
                                         <li className="day">
                                             Thứ 2 - Chủ Nhật (Chiều) <span>13.30-17.30</span>
@@ -171,7 +171,7 @@ const Footer = () => {
                             <div className="col-lg-12 col-md-12 col-12">
                                 <div className="copyright-content">
                                     <p>
-                                        © PKĐH | Nguyễn Quang Hoài Nam{" "}
+                                        © PKĐKĐH | Công Ty CP Khám Chữa Bệnh Đông Hiếu{" "}
                                     </p>
                                 </div>
                             </div>

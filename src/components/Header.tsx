@@ -47,10 +47,14 @@ const Header = () => {
                     <div className="container">
                         <div className="inner">
                             <div className="row">
-                                <div className="col-lg-3 col-md-3 col-12 mobile-nav">
+                                <div className="col-lg-4 col-md-4 col-12 mobile-nav">
                                     <div className="logo">
-                                        <Link to="/">
+                                        <Link to="/" style={{
+                                            display: 'flex',
+                                            alignItems: 'center'
+                                        }}>
                                             <img src={logo} alt="Logo" className="round-image" />
+                                            <h6 style={{marginLeft: '10px', fontWeight: 'bold', color: '#02a25c'}}>Phòng Khám Đa Khoa <br /> Đông Hiếu</h6>
                                         </Link>
                                     </div>
                                     <div className="col-6 d-md-none">
@@ -67,13 +71,13 @@ const Header = () => {
                                             <li><Link to="/" onClick={() => setIsOpen(false)}>Trang Chủ</Link></li>
                                             <li><Link to="/doctors" onClick={() => setIsOpen(false)}>Bác Sĩ</Link></li>
                                             <li><Link to="/services" onClick={() => setIsOpen(false)}>Dịch Vụ</Link></li>
-                                            <li><Link to="/blog" onClick={() => setIsOpen(false)}>Blogs</Link></li>
+                                            <li><Link to="/blogs" onClick={() => setIsOpen(false)}>Blogs</Link></li>
                                             <li><Link to="/contact" onClick={() => setIsOpen(false)}>Liên Hệ</Link></li>
                                         </ul>
                                     </div>
                                 )}
 
-                                <div className="col-lg-7 col-md-9 col-12">
+                                <div className="col-lg-6 col-md-9 col-12">
                                     <div className="main-menu">
                                         <nav className="navigation">
                                             <ul className="nav menu">

@@ -400,7 +400,7 @@ Preloader Area CSS
 }
 
 .preloader .loader .indicator svg polyline#front {
-	stroke: #06332e;
+	stroke: #02a25c;
 	stroke-dasharray: 12, 36;
 	stroke-dashoffset: 48;
 	-webkit-animation: dash 1s linear infinite;
@@ -416,7 +416,7 @@ Preloader Area CSS
 	height: 100%;
 	width: 60%;
 	z-index: -1;
-	background: #06332e;
+	background: #02a25c;
 	-webkit-transition: .9s;
 	transition: .9s;
 }
@@ -514,7 +514,7 @@ Preloader Area CSS
 	font-size: 14px;
 	text-transform: capitalize;
 	font-weight: 500;
-	background: #06332e;
+	background: #02a25c;
 	position: relative;
 	box-shadow: none;
 	display: inline-block;
@@ -593,7 +593,7 @@ Preloader Area CSS
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background: #06332e;
+	background: #02a25c;
 	opacity: 0.8;
 }
 
@@ -692,7 +692,7 @@ Preloader Area CSS
 
 .pagination .pagination-list li.active a,
 .pagination .pagination-list li:hover a {
-	background: #06332e;
+	background: #02a25c;
 	color: #fff;
 	border-color: transparent;
 }

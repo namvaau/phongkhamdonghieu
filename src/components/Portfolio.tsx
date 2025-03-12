@@ -1,7 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import {Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import pl1 from '../assets/img/pf1.jpg';
@@ -38,10 +37,9 @@ const Portfolio = () => {
             </div>
             <div className="container-fluid">
                 <Swiper
-                    modules={[Navigation, Pagination, Autoplay]}
+                    modules={[Pagination, Autoplay]}
                     spaceBetween={20}
                     slidesPerView={4}
-                    navigation
                     pagination={{ clickable: true }}
                     autoplay={{ delay: 3000, disableOnInteraction: false }}
                     loop

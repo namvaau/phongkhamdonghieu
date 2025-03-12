@@ -2,7 +2,9 @@ import section from '../assets/img/section-img.png'
 import blog1 from '../assets/img/blog1.jpg'
 import blog2 from '../assets/img/blog2.jpg'
 import blog3 from '../assets/img/blog3.jpg'
+import { useNavigate } from 'react-router-dom'
 const Blogs = () => {
+    const navigate = useNavigate();
     return (
         <>
             <section className="blog section" id="blog">
@@ -19,7 +21,7 @@ const Blogs = () => {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-lg-4 col-md-6 col-12">
+                        <div className="col-lg-4 col-md-6 col-12" onClick={() => navigate(`/blog/1`)}>
                             {/* Single Blog */}
                             <div className="single-news">
                                 <div className="news-head">
@@ -29,7 +31,7 @@ const Blogs = () => {
                                     <div className="news-content">
                                         <div className="date">22 Tháng 8, 2020</div>
                                         <h2>
-                                            <a href="blog-single.html">
+                                            <a href="" onClick={() => navigate(`/blog/1`)}>
                                                 Phòng khám Đông Hiếu triển khai dịch vụ xét nghiệm mới
                                             </a>
                                         </h2>

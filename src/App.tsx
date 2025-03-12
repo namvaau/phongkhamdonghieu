@@ -14,6 +14,8 @@ import Preloader from './components/Preloader';
 import { useEffect, useState } from 'react';
 import Blogs from './layouts/customer/Blogs';
 import AboutUs from './layouts/customer/AboutUs';
+import Urgent from './layouts/customer/Urgent';
+import Specialty from './layouts/customer/Specialty';
 
 const CustomerLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
@@ -50,6 +52,8 @@ const App: React.FC = () => {
         <Route path="/blog/1" element={<CustomerLayout><BlogDetails /></CustomerLayout>} />
         <Route path="/services" element={<CustomerLayout><Services /></CustomerLayout>} />
         <Route path="/portfolio/1" element={<CustomerLayout><PortfolioDetails /></CustomerLayout>} />
+        <Route path="/urgent" element={<CustomerLayout><Urgent /></CustomerLayout>} />
+        <Route path="/specialty" element={<CustomerLayout><Specialty /></CustomerLayout>} />
         <Route path="/doctors" element={<CustomerLayout><Doctors /></CustomerLayout>} />
         <Route path="/booking" element={<CustomerLayout><Booking /></CustomerLayout>} />
         <Route path="/about" element={<CustomerLayout><AboutUs /></CustomerLayout>} />

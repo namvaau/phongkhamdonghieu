@@ -82,13 +82,13 @@ body {
 
 .pro-features li.big-title {
   font-weight: 600;
-  color: #06332e;
+  color: #02a25c;
   font-size: 15px;
 }
 
 .pro-features li.title {
   font-weight: 600;
-  color: #06332e;
+  color: #02a25c;
   font-size: 15px;
 }
 
@@ -121,7 +121,7 @@ body {
   line-height: 45px;
   font-size: 14px;
   border-radius: 5px 0 0 5px;
-  background: #06332e;
+  background: #02a25c;
   text-align: center;
   color: #fff;
   top: 0;
@@ -135,7 +135,7 @@ body {
   bottom: 15px;
   right: 15px;
   padding: 10px 20px;
-  background: #06332e;
+  background: #02a25c;
   color: #fff;
   font-size: 25px;
   width: 45px;
@@ -148,7 +148,7 @@ body {
 }
 
 #scrollUp:hover {
-  background: #2C2D3F;
+  background: #06332e;
 }
 
 /* Color Plate */
@@ -182,7 +182,7 @@ body {
   line-height: 45px;
   font-size: 21px;
   border-radius: 5px 0 0 5px;
-  background: #06332e;
+  background: #02a25c;
   text-align: center;
   color: #fff !important;
   top: 0;
@@ -217,7 +217,7 @@ body {
 }
 
 .color-plate span.color1 {
-  background: #06332e;
+  background: #02a25c;
 }
 
 .color-plate span.color2 {
@@ -305,13 +305,13 @@ Start Header CSS
 
   .text h1 {
     font-size: 22px;
-    color: #06332e !important;
+    color: #02a25c !important;
 
   }
 
   .short-text {
     font-size: 13px;
-    color: #06332e !important;
+    color: #02a25c !important;
   }
 
 
@@ -438,13 +438,13 @@ Start Header CSS
 }
 
 .header .top-link li a {
-  color: #2C2D3F;
+  color: #06332e;
   font-size: 14px;
   font-weight: 400;
 }
 
 .header .top-link li:hover a {
-  color: #06332e;
+  color: #02a25c;
 }
 
 .header .top-contact {
@@ -454,7 +454,7 @@ Start Header CSS
 .header .top-contact li {
   display: inline-block;
   margin-right: 25px;
-  color: #2C2D3F;
+  color: #06332e;
 }
 
 .header .top-contact li:last-child {
@@ -466,11 +466,11 @@ Start Header CSS
 }
 
 .header .top-contact li a:hover {
-  color: #06332e;
+  color: #02a25c;
 }
 
 .header .top-contact li i {
-  color: #06332e;
+  color: #02a25c;
   margin-right: 8px;
 }
 
@@ -522,7 +522,7 @@ Start Header CSS
 }
 
 .header .nav li a {
-  color: #2C2D3F;
+  color: #06332e;
   font-size: 14px;
   font-weight: 500;
   text-transform: capitalize;
@@ -539,7 +539,7 @@ Start Header CSS
   bottom: 0;
   height: 3px;
   width: 0%;
-  background: #06332e;
+  background: #02a25c;
   border-radius: 5px 5px 0 0;
   opacity: 0;
   visibility: hidden;
@@ -555,7 +555,7 @@ Start Header CSS
 }
 
 .header .nav li.active a {
-  color: #06332e;
+  color: #02a25c;
 }
 
 .header .nav li:hover a:before {
@@ -565,7 +565,7 @@ Start Header CSS
 }
 
 .header .nav li:hover a {
-  color: #06332e;
+  color: #02a25c;
 }
 
 .header .nav li a i {
@@ -621,7 +621,7 @@ Start Header CSS
   width: 40px;
   line-height: 40px;
   color: #fff;
-  background: #06332e;
+  background: #02a25c;
   border-radius: 4px;
   text-align: center;
   font-size: 15px;
@@ -700,7 +700,7 @@ Start Header CSS
 }
 
 .header .nav li .dropdown li:hover a {
-  color: #06332e;
+  color: #02a25c;
 }
 
 .header .nav li .dropdown li a:hover {
@@ -731,7 +731,7 @@ Start Header CSS
   width: 35px;
   line-height: 35px;
   text-align: center;
-  background: #06332e;
+  background: #02a25c;
   border-radius: 4px;
   display: block;
   font-size: 12px;
@@ -781,7 +781,7 @@ Start Header CSS
   border-radius: 3px;
   border: none;
   background: #fff;
-  color: #2C2D3F;
+  color: #06332e;
 }
 
 .header .search-form button {
@@ -790,7 +790,7 @@ Start Header CSS
   height: 50px;
   top: 0;
   width: 50px;
-  background: #06332e;
+  background: #02a25c;
   border: none;
   color: #fff;
   border-radius: 0 4px 4px 0;
@@ -799,7 +799,7 @@ Start Header CSS
 
 .header .search-form button:hover {
   background: #fff;
-  color: #06332e;
+  color: #02a25c;
   border-color: #e6e6e6;
 }
 
@@ -860,7 +860,7 @@ Start Hero Area CSS
 }
 
 .slider .single-slider h1 span {
-  color: #06332e;
+  color: #02a25c;
 }
 
 .slider .single-slider p {
@@ -875,7 +875,7 @@ Start Hero Area CSS
 
 .slider .single-slider .btn {
   color: #fff;
-  background: #06332e;
+  background: #02a25c;
   font-weight: 500;
   display: inline-block;
   margin: 0;
@@ -887,12 +887,12 @@ Start Hero Area CSS
 }
 
 .slider .single-slider .btn.primary {
-  background: #2C2D3F;
+  background: #06332e;
   color: #fff;
 }
 
 .slider .single-slider .btn.primary:before {
-  background: #06332e;
+  background: #02a25c;
 }
 
 .slider .owl-carousel .owl-nav {
@@ -908,7 +908,7 @@ Start Hero Area CSS
   width: 50px;
   line-height: 50px;
   text-align: center;
-  background: #06332e;
+  background: #02a25c;
   color: #fff;
   font-size: 26px;
   position: absolute;
@@ -921,7 +921,7 @@ Start Hero Area CSS
 }
 
 .slider .owl-carousel .owl-nav div:hover {
-  background: #2C2D3F;
+  background: #06332e;
   color: #fff;
 }
 
@@ -971,7 +971,7 @@ Start Schedule CSS
   text-align: left;
   z-index: 3;
   border-radius: 5px;
-  background: #06332e;
+  background: #02a25c;
   -webkit-transition: all .3s ease-out 0s;
   -moz-transition: all .3s ease-out 0s;
   -ms-transition: all .3s ease-out 0s;
@@ -996,7 +996,7 @@ Start Schedule CSS
   margin: 0 auto;
   width: 80%;
   height: 90%;
-  background: #06332e;
+  background: #02a25c;
   opacity: 0;
   filter: blur(10px);
   -webkit-transition: all .3s ease-out 0s;
@@ -1138,7 +1138,7 @@ Start Feautes CSS
   right: -72px;
   top: 60px;
   width: 118px;
-  border-bottom: 3px dotted #06332e;
+  border-bottom: 3px dotted #02a25c;
 }
 
 .Feautes .single-features.last::before {
@@ -1151,7 +1151,7 @@ Start Feautes CSS
 
 .Feautes .single-features .signle-icon i {
   font-size: 50px;
-  color: #06332e;
+  color: #02a25c;
   position: absolute;
   left: 50%;
   margin-left: -50px;
@@ -1168,14 +1168,14 @@ Start Feautes CSS
 }
 
 .Feautes .single-features:hover .signle-icon i {
-  background: #06332e;
+  background: #02a25c;
   color: #fff;
   border-color: transparent;
 }
 
 .Feautes .single-features h3 {
   padding-top: 128px;
-  color: #2C2D3F;
+  color: #06332e;
   font-weight: 600;
   font-size: 21px;
 }
@@ -1230,7 +1230,7 @@ Start Fun Facts CSS
 }
 
 .fun-facts .single-fun:hover i {
-  color: #06332e;
+  color: #02a25c;
   background: #fff;
   border-color: transparent;
 }
@@ -1267,7 +1267,7 @@ Why choose CSS
 .why-choose .choose-left h3 {
   font-size: 24px;
   font-weight: 600;
-  color: #2C2D3F;
+  color: #06332e;
   position: relative;
   padding-bottom: 20px;
   margin-bottom: 24px;
@@ -1280,7 +1280,7 @@ Why choose CSS
   bottom: 0;
   height: 2px;
   width: 50px;
-  background: #06332e;
+  background: #02a25c;
 }
 
 .why-choose .choose-left p {
@@ -1303,7 +1303,7 @@ Why choose CSS
   width: 15px;
   line-height: 15px;
   text-align: center;
-  background: #06332e;
+  background: #02a25c;
   color: #fff;
   font-size: 14px;
   border-radius: 100%;
@@ -1421,7 +1421,7 @@ Why choose CSS
   margin-left: -35px;
   margin-top: -35px;
   font-size: 21px;
-  background: #06332e;
+  background: #02a25c;
   padding-left: 4px;
 }
 
@@ -1498,15 +1498,15 @@ Start Call to action CSS
   margin-right: 20px;
   font-weight: 500;
   border: 1px solid #fff;
-  color: #06332e;
+  color: #02a25c;
 }
 
 .call-action .content .btn:before {
-  background: #06332e;
+  background: #02a25c;
 }
 
 .call-action .content .btn:hover {
-  background: #06332e;
+  background: #02a25c;
   color: #fff;
 }
 
@@ -1526,7 +1526,7 @@ Start Call to action CSS
 }
 
 .call-action .content .second:hover {
-  color: #06332e;
+  color: #02a25c;
   border-color: transparent;
   background: #fff;
 }
@@ -1562,7 +1562,7 @@ Start Portfolio CSS
   top: 0;
   height: 100%;
   width: 100%;
-  background: #06332e;
+  background: #02a25c;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0.4s ease;
@@ -1577,7 +1577,7 @@ Start Portfolio CSS
 }
 
 .portfolio .single-pf .btn {
-  color: #06332e;
+  color: #02a25c;
   z-index: 3;
   background: #fff;
   position: absolute;
@@ -1628,7 +1628,7 @@ Start Portfolio CSS
   width: 50px;
   line-height: 45px;
   background: #fff;
-  color: #06332e;
+  color: #02a25c;
   position: absolute;
   margin: 0;
   border-radius: 100%;
@@ -1642,7 +1642,7 @@ Start Portfolio CSS
 
 .pf-details .image-slider .owl-carousel .owl-nav div:hover {
   color: #fff;
-  background: #06332e;
+  background: #02a25c;
 }
 
 .pf-details .image-slider .owl-carousel .owl-controls .owl-nav .owl-prev {
@@ -1663,7 +1663,7 @@ Start Portfolio CSS
 }
 
 .pf-details .date {
-  background: #06332e;
+  background: #02a25c;
   display: block;
   padding: 20px;
   text-align: center;
@@ -1741,7 +1741,7 @@ Start Portfolio CSS
 .pf-details .body-text .share ul li a:hover {
   color: #fff;
   border-color: transparent;
-  background: #06332e;
+  background: #02a25c;
 }
 
 /*==========================
@@ -1759,7 +1759,7 @@ Srart service CSS
 
 .services .single-service i {
   font-size: 45px;
-  color: #06332e;
+  color: #02a25c;
   position: absolute;
   left: 0;
   -webkit-transition: all 0.4s ease;
@@ -1770,17 +1770,17 @@ Srart service CSS
 .services .single-service h4 {
   text-transform: capitalize;
   margin-bottom: 25px;
-  color: #2C2D3F;
+  color: #06332e;
 }
 
 .services .single-service h4 a {
-  color: #2C2D3F;
+  color: #06332e;
   font-size: 20px;
   font-weight: 600;
 }
 
 .services .single-service h4 a:hover {
-  color: #06332e;
+  color: #02a25c;
 }
 
 .services .single-service p {
@@ -1810,7 +1810,7 @@ Srart service CSS
 .services-details-img blockquote {
   font-size: 15px;
   color: #4a6f8a;
-  background-color: #06332e;
+  background-color: #02a25c;
   padding: 30px 75px;
   line-height: 26px;
   position: relative;
@@ -1849,7 +1849,7 @@ Srart service CSS
   font-weight: 600;
   font-size: 30px;
   margin-bottom: 15px;
-  border-left: 3px solid #06332e;
+  border-left: 3px solid #02a25c;
   padding-left: 15px;
 }
 
@@ -1917,7 +1917,7 @@ Start Testimonials CSS
 
 .testimonials .single-testimonial .name {
   margin-top: 22px;
-  color: #2C2D3F;
+  color: #06332e;
   font-weight: 500;
   font-size: 15px;
 }
@@ -1993,7 +1993,7 @@ Start Departments CSS
 }
 
 .departments .department-tab .nav li a.active i {
-  color: #06332e;
+  color: #02a25c;
 }
 
 .departments .department-tab .nav li a {
@@ -2007,7 +2007,7 @@ Start Departments CSS
 }
 
 .departments .department-tab .nav li a.active {
-  border-color: #06332e;
+  border-color: #02a25c;
 }
 
 .departments .department-tab .nav li span {
@@ -2022,7 +2022,7 @@ Start Departments CSS
 }
 
 .departments .department-tab .nav li a.active .first {
-  color: #2C2D3F;
+  color: #06332e;
 }
 
 .departments .department-tab .nav li .second {
@@ -2035,7 +2035,7 @@ Start Departments CSS
 .departments .department-tab .tab-pane .department-left {}
 
 .departments .department-tab .tab-pane .department-left h3 {
-  color: #2C2D3F;
+  color: #06332e;
   font-weight: 600;
   font-size: 26px;
   position: relative;
@@ -2050,11 +2050,11 @@ Start Departments CSS
   bottom: 0;
   height: 3px;
   width: 50px;
-  background: #2C2D3F;
+  background: #06332e;
 }
 
 .departments .department-tab .tab-pane .department-left .p1 {
-  color: #06332e;
+  color: #02a25c;
   font-weight: 500;
   margin-bottom: 18px;
 }
@@ -2082,7 +2082,7 @@ Start Departments CSS
   width: 15px;
   line-height: 15px;
   color: #fff;
-  background: #06332e;
+  background: #02a25c;
   text-align: center;
   border-radius: 100%;
   font-size: 8px;
@@ -2128,12 +2128,12 @@ Start Pricing Table CSS
 
 .pricing-table .single-table .icon i {
   font-size: 65px;
-  color: #06332e;
+  color: #02a25c;
 }
 
 .pricing-table .single-table .title {
   font-size: 21px;
-  color: #2C2D3F;
+  color: #06332e;
   margin-top: 30px;
   margin-bottom: 15px;
 }
@@ -2141,7 +2141,7 @@ Start Pricing Table CSS
 .pricing-table .single-table .amount {
   font-size: 36px;
   font-weight: 600;
-  color: #06332e;
+  color: #02a25c;
 }
 
 .pricing-table .single-table .amount span {
@@ -2186,7 +2186,7 @@ Start Pricing Table CSS
   line-height: 16px;
   text-align: center;
   color: #fff;
-  background: #06332e;
+  background: #02a25c;
   border-radius: 100%;
   padding-left: 1px;
 }
@@ -2203,7 +2203,7 @@ Start Pricing Table CSS
 }
 
 .pricing-table .btn:before {
-  background: #2C2D3F;
+  background: #06332e;
 }
 
 .pricing-table .btn:hover {
@@ -2365,11 +2365,11 @@ Start Team CSS
   font-size: 18px;
   text-transform: capitalize;
   font-weight: 500;
-  color: #2C2D3F;
+  color: #06332e;
 }
 
 .team .t-bottom h2 a:hover {
-  color: #06332e;
+  color: #02a25c;
 }
 
 /*-- Doctor Details --*/
@@ -2392,7 +2392,7 @@ Start Team CSS
 .doctor-details-item .doctor-details-contact h3 {
   font-weight: 600;
   font-size: 20px;
-  color: #2C2D3F;
+  color: #06332e;
   margin-bottom: 30px;
 }
 
@@ -2406,7 +2406,7 @@ Start Team CSS
   display: block;
   font-weight: 400;
   font-size: 15px;
-  color: #2C2D3F;
+  color: #06332e;
   margin-bottom: 10px;
 }
 
@@ -2416,7 +2416,7 @@ Start Team CSS
 
 .doctor-details-item .doctor-details-contact .basic-info li i {
   display: inline-block;
-  color: #06332e;
+  color: #02a25c;
   margin-right: 8px;
   font-size: 16px;
   position: relative;
@@ -2452,14 +2452,14 @@ Start Team CSS
 
 .doctor-details-area .doctor-details-left .social li a:hover {
   color: #fff;
-  background: #06332e;
+  background: #02a25c;
   border-color: transparent;
 }
 
 .doctor-details-item .doctor-details-work h3 {
   font-weight: 600;
   font-size: 20px;
-  color: #2C2D3F;
+  color: #06332e;
   margin-top: 30px;
 }
 
@@ -2471,7 +2471,7 @@ Start Team CSS
 
 .doctor-details-item .doctor-details-work .time-sidual li {
   display: block;
-  color: #2C2D3F;
+  color: #06332e;
   width: 100%;
   margin-bottom: 10px;
 }
@@ -2590,7 +2590,7 @@ Start Blog CSS
   bottom: 0;
   height: 2px;
   width: 0%;
-  background: #06332e;
+  background: #02a25c;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0.4s ease;
@@ -2612,12 +2612,12 @@ Start Blog CSS
 }
 
 .blog .single-news .news-body h2 a {
-  color: #2C2D3F;
+  color: #06332e;
   font-weight: 500;
 }
 
 .blog .single-news .news-body h2 a:hover {
-  color: #06332e;
+  color: #02a25c;
 }
 
 .blog .single-news .news-content p {
@@ -2632,7 +2632,7 @@ Start Blog CSS
   display: inline-block;
   font-size: 14px;
   margin-bottom: 5px;
-  background: #06332e;
+  background: #02a25c;
   color: #fff;
   padding: 4px 15px;
   border-radius: 3px;
@@ -2679,7 +2679,7 @@ Start Blog CSS
   bottom: -1px;
   height: 100%;
   width: 3px;
-  background: #06332e;
+  background: #02a25c;
 }
 
 .main-sidebar .single-widget:last-child {
@@ -2729,7 +2729,7 @@ Start Blog CSS
 }
 
 .main-sidebar .search .button:hover {
-  background: #06332e;
+  background: #02a25c;
   color: #fff;
 }
 
@@ -2753,7 +2753,7 @@ Start Blog CSS
 }
 
 .main-sidebar .categor-list li a:hover {
-  color: #06332e;
+  color: #02a25c;
   padding-left: 7px;
 }
 
@@ -2804,7 +2804,7 @@ Start Blog CSS
 }
 
 .main-sidebar .single-post .content h5 a {
-  color: #2C2D3F;
+  color: #06332e;
   font-weight: 500;
   font-size: 14px;
   font-weight: 500;
@@ -2815,7 +2815,7 @@ Start Blog CSS
 }
 
 .main-sidebar .single-post .content h5 a:hover {
-  color: #06332e;
+  color: #02a25c;
 }
 
 .main-sidebar .single-post .content .comment li {
@@ -2859,7 +2859,7 @@ Start Blog CSS
 
 .main-sidebar .side-tags .tag a:hover {
   color: #fff;
-  background: #06332e;
+  background: #02a25c;
   border-color: transparent;
 }
 
@@ -2897,7 +2897,7 @@ Start Blog CSS
 }
 
 .news-single .news-title a:hover {
-  color: #06332e;
+  color: #02a25c;
 }
 
 /* Blog Meta */
@@ -2925,13 +2925,13 @@ Start Blog CSS
 
 .news-single .meta span,
 .news-single .meta span a {
-  color: #2C2D3F;
+  color: #06332e;
   font-weight: 400;
 }
 
 .news-single .meta span i {
   margin-right: 5px;
-  color: #06332e;
+  color: #02a25c;
 }
 
 .news-single .meta-left {
@@ -3088,7 +3088,7 @@ Start Blog CSS
 
 .news-single .prev-next li a:hover {
   color: #fff;
-  background: #06332e;
+  background: #02a25c;
   border-color: transparent;
 }
 
@@ -3229,12 +3229,12 @@ Start Blog CSS
   display: inline-block;
   margin-top: 10px;
   border-radius: 4px;
-  background: #06332e;
+  background: #02a25c;
   color: #fff;
 }
 
 .news-single .single-comments a:hover {
-  background: #2C2D3F;
+  background: #06332e;
   color: #fff;
 }
 
@@ -3292,7 +3292,7 @@ Start Blog CSS
   left: 12px;
   top: 17px;
   z-index: 1;
-  color: #06332e;
+  color: #02a25c;
 }
 
 .news-single .form-group input {
@@ -3309,7 +3309,7 @@ Start Blog CSS
   line-height: 50px;
   font-weight: 400;
   font-size: 14px;
-  color: #2C2D3F;
+  color: #06332e;
 }
 
 .news-single .form-group textarea {
@@ -3326,7 +3326,7 @@ Start Blog CSS
   resize: none;
   font-weight: 400;
   font-size: 14px;
-  color: #2C2D3F;
+  color: #06332e;
 }
 
 .news-single .form-group input,
@@ -3373,7 +3373,7 @@ Start Blog CSS
 
 .news-single .form-group.button .btn {
   background: #fff;
-  background: #06332e;
+  background: #02a25c;
   color: #fff;
 }
 
@@ -3492,7 +3492,7 @@ Start Appointment CSS
 
 .appointment .form-group .list li:hover {
   color: #fff;
-  background: #06332e;
+  background: #02a25c;
 }
 
 .appointment .appointment-image img {
@@ -3525,7 +3525,7 @@ Start Appointment CSS
 }
 
 .appointment.single-page .work-hour {
-  background: #06332e;
+  background: #02a25c;
   padding: 40px;
   box-shadow: 0px 0px 10px #00000024;
   border-radius: 5px;
@@ -3609,7 +3609,7 @@ End Appointment CSS
   bottom: 0;
   height: 2px;
   width: 50px;
-  background: #06332e;
+  background: #02a25c;
 }
 
 .login .login-form p {
@@ -3623,11 +3623,11 @@ End Appointment CSS
 .login .login-form p a {
   display: inline-block;
   margin-left: 5px;
-  color: #06332e;
+  color: #02a25c;
 }
 
 .login .login-form p a:hover {
-  color: #2C2D3F;
+  color: #06332e;
 }
 
 .login .form {
@@ -3667,7 +3667,7 @@ End Appointment CSS
 }
 
 .login .form .btn:hover {
-  background: #06332e;
+  background: #02a25c;
   color: #fff;
 }
 
@@ -3702,7 +3702,7 @@ End Appointment CSS
   top: 5px;
   width: 15px;
   height: 15px;
-  border: 1px solid #06332e;
+  border: 1px solid #02a25c;
   border-radius: 100%;
 }
 
@@ -3721,7 +3721,7 @@ End Appointment CSS
   transition: all 0.4s ease;
   display: block;
   font-size: 9px;
-  background: #06332e;
+  background: #02a25c;
   border-radius: 100%;
 }
 
@@ -3740,7 +3740,7 @@ End Appointment CSS
 }
 
 .login .login-form .lost-pass:hover {
-  color: #06332e;
+  color: #02a25c;
 }
 
 /*====================
@@ -3788,7 +3788,7 @@ End Appointment CSS
   bottom: 0;
   height: 2px;
   width: 50px;
-  background: #06332e;
+  background: #02a25c;
 }
 
 .register .register-form p {
@@ -3802,11 +3802,11 @@ End Appointment CSS
 .register .register-form p a {
   display: inline-block;
   margin-left: 5px;
-  color: #06332e;
+  color: #02a25c;
 }
 
 .register .register-form p a:hover {
-  color: #2C2D3F;
+  color: #06332e;
 }
 
 .register .form {
@@ -3846,7 +3846,7 @@ End Appointment CSS
 }
 
 .register .form .btn:hover {
-  background: #06332e;
+  background: #02a25c;
   color: #fff;
 }
 
@@ -3881,7 +3881,7 @@ End Appointment CSS
   top: 5px;
   width: 15px;
   height: 15px;
-  border: 1px solid #06332e;
+  border: 1px solid #02a25c;
   border-radius: 100%;
 }
 
@@ -3900,7 +3900,7 @@ End Appointment CSS
   transition: all 0.4s ease;
   display: block;
   font-size: 9px;
-  background: #06332e;
+  background: #02a25c;
   border-radius: 100%;
 }
 
@@ -3913,11 +3913,11 @@ End Appointment CSS
 .register .register-form .terms {
   display: inline-block;
   margin-left: 5px;
-  color: #06332e;
+  color: #02a25c;
 }
 
 .register .register-form .terms:hover {
-  color: #2C2D3F;
+  color: #06332e;
 }
 
 /*=========================
@@ -3969,7 +3969,7 @@ End Appointment CSS
 
 .accordion a:hover {
   color: #fff !important;
-  background: #06332e !important;
+  background: #02a25c !important;
 }
 
 .accordion a:after {
@@ -4002,8 +4002,8 @@ End Appointment CSS
 
 .accordion li a.active {
   color: #ffffff;
-  background-color: #06332e;
-  border: 1px solid #06332e;
+  background-color: #02a25c;
+  border: 1px solid #02a25c;
 }
 
 .accordion li a.active:after {
@@ -4053,7 +4053,7 @@ End Appointment CSS
   bottom: 0;
   height: 2px;
   width: 50px;
-  background: #06332e;
+  background: #02a25c;
 }
 
 .contact-us .contact-us-form p {
@@ -4113,7 +4113,7 @@ End Appointment CSS
 }
 
 .contact-us .form .btn:hover {
-  background: #06332e;
+  background: #02a25c;
   color: #fff;
 }
 
@@ -4148,7 +4148,7 @@ End Appointment CSS
   top: 5px;
   width: 15px;
   height: 15px;
-  border: 1px solid #06332e;
+  border: 1px solid #02a25c;
   border-radius: 100%;
 }
 
@@ -4167,7 +4167,7 @@ End Appointment CSS
   transition: all 0.4s ease;
   display: block;
   font-size: 9px;
-  background: #06332e;
+  background: #02a25c;
   border-radius: 100%;
 }
 
@@ -4182,7 +4182,7 @@ End Appointment CSS
 }
 
 .contact-us .single-info {
-  background: #06332e;
+  background: #02a25c;
   padding: 40px 60px;
   height: 150px;
   border-radius: 10px;
@@ -4204,7 +4204,7 @@ End Appointment CSS
   margin: 0 auto;
   width: 80%;
   height: 90%;
-  background: #06332e;
+  background: #02a25c;
   opacity: 0;
   filter: blur(10px);
   -webkit-transition: all .3s ease-out 0s;
@@ -4271,7 +4271,7 @@ Start Error 404 CSS
 .error-page .error-inner h1 {
   font-size: 140px;
   text-shadow: 3px 5px 2px #3333;
-  color: #06332e;
+  color: #02a25c;
   font-weight: 700;
 }
 
@@ -4314,7 +4314,7 @@ Start Error 404 CSS
   height: 50px;
   border-radius: 5px;
   cursor: pointer;
-  background: #06332e;
+  background: #02a25c;
   display: inline-block;
   position: relative;
   top: -2px;
@@ -4344,7 +4344,7 @@ Start Mail Success CSS
 .mail-seccess .success-inner h1 {
   font-size: 100px;
   text-shadow: 3px 5px 2px #3333;
-  color: #06332e;
+  color: #02a25c;
   font-weight: 700;
 }
 
@@ -4381,7 +4381,7 @@ Start Newsletter CSS
 .newsletter .subscribe-text h6 {
   font-size: 22px;
   margin-bottom: 10px;
-  color: #2C2D3F;
+  color: #06332e;
 }
 
 .newsletter .subscribe-text p {}
@@ -4456,7 +4456,7 @@ Start Doctor Calendar CSS
 .doctor-calendar-table table thead tr th {
   vertical-align: middle;
   text-align: center;
-  background-color: #06332e;
+  background-color: #02a25c;
   border: none;
   color: #ffffff;
   text-transform: uppercase;
@@ -4509,7 +4509,7 @@ Start Doctor Calendar CSS
 .doctor-calendar-table table tbody tr td span.time {
   display: inline-block;
   background-color: #dff5e8;
-  color: #06332e;
+  color: #02a25c;
   width: 65px;
   height: 65px;
   border-radius: 50%;
@@ -4521,8 +4521,8 @@ Start Doctor Calendar CSS
 }
 
 .doctor-calendar-table table tbody tr td:hover {
-  background-color: #06332e;
-  border-color: #06332e;
+  background-color: #02a25c;
+  border-color: #02a25c;
 }
 
 .doctor-calendar-table table tbody tr td:hover h3 {
@@ -4535,7 +4535,7 @@ Start Doctor Calendar CSS
 
 .doctor-calendar-table table tbody tr td:hover span.time {
   background-color: #ffffff;
-  color: #06332e;
+  color: #02a25c;
 }
 
 .doctor-calendar-table table tbody tr:last-child td {
@@ -4577,7 +4577,7 @@ Start About Us CSS
 .about-content span {
   display: block;
   margin-bottom: 5px;
-  color: #06332e;
+  color: #02a25c;
   font-size: 17px;
 }
 
@@ -4612,8 +4612,8 @@ Start About Us CSS
   line-height: 25px;
   text-align: center;
   border-radius: 100%;
-  background-color: #06332e2B;
-  color: #06332e;
+  background-color: #02a25c2B;
+  color: #02a25c;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   display: inline-block;
@@ -4624,7 +4624,7 @@ Start About Us CSS
 }
 
 .about-content ul li:hover i {
-  background-color: #06332e;
+  background-color: #02a25c;
   color: #ffffff;
 }
 
@@ -4663,7 +4663,7 @@ Start About Us CSS
   height: 60px;
   line-height: 60px;
   border-radius: 100%;
-  background-color: #06332e;
+  background-color: #02a25c;
   color: #ffffff;
   font-size: 25px;
   -webkit-transition: 0.5s;
@@ -4694,7 +4694,7 @@ Start About Us CSS
   position: absolute;
   left: 0;
   top: 0;
-  background-color: #06332e;
+  background-color: #02a25c;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -4725,7 +4725,7 @@ Start About Us CSS
 
 .single-vision-box:hover .icon {
   background-color: #fff;
-  color: #06332e;
+  color: #02a25c;
 }
 
 .single-vision-box:hover h3 {
@@ -4773,7 +4773,7 @@ Start About Us CSS
 .our-mission-content .sub-title {
   display: block;
   margin-bottom: 5px;
-  color: #06332e;
+  color: #02a25c;
   font-size: 17px;
 }
 
@@ -4825,7 +4825,7 @@ Start About Us CSS
   line-height: 50px;
   text-align: center;
   border-radius: 50%;
-  color: #06332e;
+  color: #02a25c;
   font-size: 20px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -4841,7 +4841,7 @@ Start About Us CSS
 }
 
 .our-mission-content ul li:hover .icon {
-  background-color: #06332e;
+  background-color: #02a25c;
   color: #ffffff;
   border-radius: 100%;
 }
@@ -4862,7 +4862,7 @@ Start Footer CSS
 .footer .footer-top {
   padding: 100px 0px;
   position: relative;
-  background: #06332e;
+  background: #02a25c;
 }
 
 .footer .footer-top:before {
@@ -4906,7 +4906,7 @@ Start Footer CSS
 }
 
 .footer .single-footer .social li a:hover {
-  color: #06332e;
+  color: #02a25c;
   background: #fff;
   border-color: transparent;
 }
@@ -5057,7 +5057,7 @@ Start Footer CSS
   -moz-transition: all 0.4s ease;
   transition: all 0.4s ease;
   border-radius: 0 5px 5px 0;
-  color: #06332e;
+  color: #02a25c;
   font-size: 25px;
 }
 
@@ -5068,11 +5068,11 @@ Start Footer CSS
 }
 
 .footer .single-footer .newsletter-inner .button:hover i {
-  color: #2C2D3F;
+  color: #06332e;
 }
 
 .footer .copyright {
-  background: #06332e;
+  background: #02a25c;
   padding: 25px 0px 25px 0px;
   text-align: center;
 }
@@ -5143,7 +5143,7 @@ End Footer CSS
   left: 0;
   width: 100%;
   height: 100%;
-  background: #06332e69;
+  background: #02a25c69;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -5203,13 +5203,13 @@ End Footer CSS
 
 .main-title {
   font-size: 32px;
-  color: #06332e;
+  color: #02a25c;
   font-weight: bold;
 }
 
 .sub-title {
   font-size: 24px;
-  color: #06332e;
+  color: #02a25c;
   font-weight: bold;
   margin-top: 10px;
 }
@@ -5236,7 +5236,7 @@ End Footer CSS
 
 .title {
   font-size: 28px;
-  color: #06332e;
+  color: #02a25c;
   font-weight: bold;
 }
 
