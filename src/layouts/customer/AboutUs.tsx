@@ -1,10 +1,7 @@
-import React from 'react'
 import Breadcrumbs from '../../components/Breadcrumbs'
 import WelcomeSection from '../../components/WelcomeSection'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/autoplay";
 import client1 from '../../assets/img/client1.png'
 import client2 from '../../assets/img/client2.png'
 import client3 from '../../assets/img/client3.png'

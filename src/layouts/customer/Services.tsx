@@ -1,4 +1,3 @@
-import React from 'react'
 import Breadcrumbs from '../../components/Breadcrumbs'
 import section from '../../assets/img/section-img.png'
 const Services = () => {

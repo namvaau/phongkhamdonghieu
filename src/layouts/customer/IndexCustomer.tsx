@@ -1,6 +1,3 @@
-import React from 'react'
-import Preloader from '../../components/Preloader'
-import Header from '../../components/Header'
 import Slider from '../../components/Slider'
 import Schedule from '../../components/Schedule'
 import Feautes from '../../components/Feautes'

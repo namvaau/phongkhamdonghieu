@@ -1,4 +1,3 @@
-import React from 'react'
 import Breadcrumbs from '../../components/Breadcrumbs'
 import blog1 from '../../assets/img/bread-bg.jpg'
 import blog2 from '../../assets/img/blog1.jpg'

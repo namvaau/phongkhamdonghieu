@@ -152,9 +152,6 @@ const Footer = () => {
                                             name="email"
                                             placeholder="Email của bạn"
                                             className="common-input"
-                                            onfocus="this.placeholder = ''"
-                                            onblur="this.placeholder = 'Your email address'"
-                                            required=""
                                             type="email"
                                         />
                                         <button className="button">

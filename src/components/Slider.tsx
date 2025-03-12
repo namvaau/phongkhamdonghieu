@@ -1,8 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import 'swiper/css';
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+// import "swiper/css/navigation";
+// import "swiper/css/pagination";
 
 import banner1 from '../assets/img/slider.jpg';
 import banner2 from '../assets/img/slider2.jpg';
