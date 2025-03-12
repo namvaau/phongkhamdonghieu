@@ -78,7 +78,7 @@ const BlogDetails = () => {
                                                 </div>
                                             </div>
                                             <p>
-                                                Với phương châm "Sức khỏe của bạn là sứ mệnh của chúng tôi", Đông Hiếu không ngừng nâng cao chất lượng dịch vụ để phục vụ khách hàng tốt nhất.
+                                                Với phương châm "Sức khỏe của bạn là sứ mệnh của chúng tôi",Phòng Khám Đa Khoa Đông Hiếu không ngừng nâng cao chất lượng dịch vụ để phục vụ khách hàng tốt nhất.
                                             </p>
                                             <blockquote className="overlay">
                                                 <p>

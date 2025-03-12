@@ -54,7 +54,18 @@ const Header = () => {
                                             alignItems: 'center'
                                         }}>
                                             <img src={logo} alt="Logo" className="round-image" />
-                                            <h6 style={{marginLeft: '10px', fontWeight: 'bold', color: '#02a25c', fontSize: '19px'}}>Phòng Khám ĐK Đông Hiếu</h6>
+                                            <h6
+                                                className='name-mobile'
+                                                style={{
+                                                    marginLeft: '10px',
+                                                    fontWeight: 'bold',
+                                                    color: '#02a25c',
+                                                    fontSize: '18px',
+                                                    whiteSpace: 'nowrap' // Ngăn chữ xuống dòng
+                                                }}
+                                            >
+                                                Phòng Khám ĐK Đông Hiếu
+                                            </h6>
                                         </Link>
                                     </div>
                                     <div className="col-6 d-md-none">

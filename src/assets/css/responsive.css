@@ -263,6 +263,10 @@ Version:	1.1
 		margin-top: 20px;
 	}
 
+	.name-mobile {
+		font-size: 14px;
+	}
+
 	.call-action .content {
 		padding: 0;
 		padding: 70px 0;
@@ -1371,6 +1375,10 @@ Version:	1.1
 		margin: 0;
 		width: 100%;
 		margin-bottom: 10px;
+	}
+
+	.name-mobile {
+		font-size: 14px !important;
 	}
 
 	.slider .single-slider .button .btn:last-child {
