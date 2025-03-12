@@ -1,17 +1,15 @@
 import section from "../assets/img/section-img.png";
-import appointment from "../assets/img/datlich.jpg";
-
 
 const Appointment = () => {
     return (
         <>
-            <section className="appointment" style={{paddingBottom: '50px'}}>
+            <section className="appointment" style={{ paddingBottom: '50px' }}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="section-title">
                                 <h2>Chúng tôi luôn sẵn sàng hỗ trợ bạn. Đặt lịch khám ngay!</h2>
-                                <img src={section} alt="section"/>
+                                <img src={section} alt="section" />
                                 <p>
                                     Hãy đặt lịch hẹn với bác sĩ của chúng tôi để nhận được sự tư vấn và chăm sóc y tế tốt nhất.
                                 </p>
@@ -19,7 +17,7 @@ const Appointment = () => {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-lg-6 col-md-12 col-12">
+                        <div className="col-lg-12 col-md-12 col-12">
                             <form className="form" action="#">
                                 <div className="row">
                                     <div className="col-lg-6 col-md-6 col-12">
@@ -83,7 +81,7 @@ const Appointment = () => {
                                         </div>
                                     </div>
                                     <div className="col-lg-6 col-md-6 col-12">
-                                    <div className="form-group">
+                                        <div className="form-group">
                                             <input type="date" placeholder="Date" id="datepicker" />
                                         </div>
                                     </div>
@@ -112,11 +110,6 @@ const Appointment = () => {
                                     </div>
                                 </div>
                             </form>
-                        </div>
-                        <div className="col-lg-6 col-md-12">
-                            <div className="appointment-image">
-                                <img src={appointment} alt="appointment" />
-                            </div>
                         </div>
                     </div>
                 </div>
