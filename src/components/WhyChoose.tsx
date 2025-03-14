@@ -11,7 +11,7 @@ const WhyChoose = () => {
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="section-title">
-                                <h2>Chúng Tôi Cung Cấp Nhiều Dịch Vụ Để Cải Thiện Sức Khỏe Của Bạn</h2>
+                                <h2>Chúng Tôi Cung Cấp Nhiều Thiết Bị Y Tế Hiện Đại & Chuyên Nghiệp</h2>
                                 <img src={section} alt="Dịch vụ y tế" />
                                 <p>
                                     Phòng khám Đông Hiếu cam kết mang đến các dịch vụ y tế chất lượng, từ khám tổng quát, chẩn đoán hình ảnh đến điều trị chuyên sâu, giúp bạn luôn khỏe mạnh.
@@ -24,9 +24,9 @@ const WhyChoose = () => {
                         <div className="col-lg-6 col-12">
                             {/* Start Choose Left */}
                             <div className="choose-left">
-                                <h3>Về Chúng Tôi</h3>
+                                <h3>HỆ THỐNG TRANG THIẾT BỊ Y TẾ HIỆN ĐẠI</h3>
                                 <p>
-                                    Phòng khám Đông Hiếu là địa chỉ tin cậy trong lĩnh vực chăm sóc sức khỏe, mang đến dịch vụ y tế chất lượng cao với đội ngũ bác sĩ giàu kinh nghiệm.
+                                    Bên cạnh việc chú trọng vào phát triển nguồn nhân lực, lãnh đạo bệnh viện cũng hết sức quan tâm đến công tác đầu tư trang thiết bị y tế nhầm đáp ứng về số lượng, vừa đảm bảo về chất lượng phục vụ.
                                 </p>
                                 <p>
                                     Chúng tôi cam kết cung cấp dịch vụ tận tâm, sử dụng trang thiết bị hiện đại và không ngừng cải tiến để đáp ứng nhu cầu chăm sóc sức khỏe của cộng đồng.
@@ -36,15 +36,19 @@ const WhyChoose = () => {
                                         <ul className="list">
                                             <li>
                                                 <i className="fa fa-caret-right" />
-                                                Đội ngũ bác sĩ giỏi, tận tâm.
+                                                Hệ thống xét nghiệm hoàn chỉnh sinh hoá, huyết học, miễn dịch
                                             </li>
                                             <li>
                                                 <i className="fa fa-caret-right" />
-                                                Cơ sở vật chất hiện đại.
+                                                Hệ thống mổ nội soi đa chiều
                                             </li>
                                             <li>
                                                 <i className="fa fa-caret-right" />
-                                                Dịch vụ chăm sóc toàn diện.
+                                                Siêu âm 4D, 5D
+                                            </li>
+                                            <li>
+                                                <i className="fa fa-caret-right" />
+                                                Hệ thống máy chụp X-quang kỹ thuật số DR
                                             </li>
                                         </ul>
                                     </div>
@@ -52,15 +56,19 @@ const WhyChoose = () => {
                                         <ul className="list">
                                             <li>
                                                 <i className="fa fa-caret-right" />
-                                                Hỗ trợ tư vấn 24/7.
+                                                Hệ thống chụp mạch máu số hoá xoá nền - DSA
                                             </li>
                                             <li>
                                                 <i className="fa fa-caret-right" />
-                                                Quy trình chuyên nghiệp.
+                                                Hệ thống máy chụp CT-Scanner 32 lát cắt
                                             </li>
                                             <li>
                                                 <i className="fa fa-caret-right" />
-                                                Môi trường thân thiện.
+                                                Hệ thông nội soi tiêu hoá
+                                            </li>
+                                            <li>
+                                                <i className="fa fa-caret-right" />
+                                                Hệ thống lưu trữ và truyền tải hình ảnh y tế PACS
                                             </li>
                                         </ul>
                                     </div>

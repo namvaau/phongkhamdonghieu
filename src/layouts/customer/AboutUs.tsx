@@ -65,38 +65,8 @@ const AboutUs = () => {
                         </div>
                         <div className="col-lg-6 col-12">
                             {/* Start Choose Rights */}
-                            <div className="choose-right">
-                                <div className="video-image">
-                                    <div className="promo-video">
-
-                                    </div>
-                                </div>
-
-                            </div>
-                            {/* End Choose Rights */}
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section className="why-choose section" style={{ padding: '20px 0 50px 0' }}>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-6 col-12">
-                            {/* Start Choose Rights */}
-                            <div className="choose-right active">
-                                <div className="video-image">
-                                    <div className="promo-video">
-
-                                    </div>
-                                </div>
-
-                            </div>
-                            {/* End Choose Rights */}
-                        </div>
-                        <div className="col-lg-6 col-12">
-                            {/* Start Choose Left */}
                             <div className="choose-left">
-                                <h3 style={{paddingTop: '20px'}}>NGHĨA VỤ CỦA NGƯỜI BỆNH</h3>
+                                <h3>NGHĨA VỤ CỦA NGƯỜI BỆNH</h3>
                                 <p>
                                     <i className="fa fa-caret-right" /> Nghĩa vụ tôn trọng người hành bệnh.
                                 </p>
@@ -108,10 +78,8 @@ const AboutUs = () => {
                                 </p>
                                 <p className="quote">“Trích luật khám chữa bệnh”</p>
                             </div>
-
-                            {/* End Choose Left */}
+                            {/* End Choose Rights */}
                         </div>
-
                     </div>
                 </div>
             </section>

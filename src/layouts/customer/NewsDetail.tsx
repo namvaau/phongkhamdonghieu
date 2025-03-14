@@ -1,16 +1,47 @@
 import Breadcrumbs from '../../components/Breadcrumbs'
-import blog1 from '../../assets/img/bread-bg.jpg'
-import blog2 from '../../assets/img/blog1.jpg'
-import blog3 from '../../assets/img/blog2.jpg'
-import blogS1 from '../../assets/img/blog-sidebar1.jpg'
-import blogS2 from '../../assets/img/blog-sidebar2.jpg'
-import blogS3 from '../../assets/img/blog-sidebar3.jpg'
 import author from '../../assets/img/author1.jpg'
+import { useNavigate, useParams } from 'react-router-dom'
+import type { News, NewsDetail } from '../../interface/InterfaceData'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 
-const BlogDetails = () => {
+const NewsDetail = () => {
+    const { id } = useParams();
+    const [newsDetails, setNewsDetails] = useState<NewsDetail | null>();
+
+    useEffect(() => {
+        axios.get(`https://pkdkdonghieube.onrender.com/news/${id}/details`)
+            .then((res) => {
+                console.log("Dữ liệu từ API:", res.data[0]);
+                setNewsDetails(res.data[0]);
+            })
+            .catch((err) => console.error("Lỗi khi lấy dữ liệu:", err));
+    }, [id]);
+
+    const [news, setNews] = useState<News[]>([]);
+
+    useEffect(() => {
+        const getNews = async () => {
+            const response = await axios.get("https://pkdkdonghieube.onrender.com/news");
+            setNews(response.data);
+        };
+        getNews();
+    }, []);
+    const navigate = useNavigate();
+    const formatDate = (dateString: string) => {
+        if (!dateString) return ""; // Kiểm tra nếu dateString rỗng thì trả về chuỗi rỗng
+        const date = new Date(dateString);
+        return new Intl.DateTimeFormat("vi-VN", {
+            day: "2-digit",
+            month: "2-digit",
+            year: "numeric"
+        }).format(date);
+    };
+
+
     return (
         <>
-            <Breadcrumbs title='Blogs' />
+            <Breadcrumbs title='Tin tức' />
             <section className="news-single section">
                 <div className="container">
                     <div className="row">
@@ -20,12 +51,12 @@ const BlogDetails = () => {
                                     <div className="single-main">
                                         {/* News Head */}
                                         <div className="news-head">
-                                            <img src={blog1} alt="Phòng khám Đông Hiếu" />
+                                            <img src={newsDetails?.image1} alt="Phòng khám Đông Hiếu" />
                                         </div>
                                         {/* News Title */}
                                         <h1 className="news-title">
                                             <a href="news-single.html">
-                                                Chăm sóc sức khỏe tận tâm tại Phòng khám Đông Hiếu
+                                                {newsDetails?.title}
                                             </a>
                                         </h1>
                                         {/* Meta */}
@@ -39,7 +70,7 @@ const BlogDetails = () => {
                                                 </span>
                                                 <span className="date">
                                                     <i className="fa fa-clock-o" />
-                                                    12 Tháng 3, 2025
+                                                    {formatDate(newsDetails?.createTime || "")}
                                                 </span>
                                             </div>
                                             <div className="meta-right">
@@ -58,27 +89,27 @@ const BlogDetails = () => {
                                         {/* News Text */}
                                         <div className="news-text">
                                             <p>
-                                                Phòng khám Đông Hiếu cam kết mang đến dịch vụ chăm sóc sức khỏe chất lượng cao, với đội ngũ bác sĩ giàu kinh nghiệm và trang thiết bị hiện đại.
+                                                {newsDetails?.content}
                                             </p>
                                             <p>
-                                                Chúng tôi chuyên cung cấp các dịch vụ khám chữa bệnh, xét nghiệm y khoa và tư vấn sức khỏe toàn diện, đảm bảo sự an tâm cho mọi bệnh nhân.
+                                                {newsDetails?.content2}
                                             </p>
                                             <div className="image-gallery">
                                                 <div className="row">
                                                     <div className="col-lg-6 col-md-6 col-12">
                                                         <div className="single-image">
-                                                            <img src={blog2} alt="Dịch vụ y tế tại Đông Hiếu" />
+                                                            <img src={newsDetails?.image1} alt="Dịch vụ y tế tại Đông Hiếu" />
                                                         </div>
                                                     </div>
                                                     <div className="col-lg-6 col-md-6 col-12">
                                                         <div className="single-image">
-                                                            <img src={blog3} alt="Trang thiết bị hiện đại" />
+                                                            <img src={newsDetails?.image2} alt="Trang thiết bị hiện đại" />
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <p>
-                                                Với phương châm "Sức khỏe của bạn là sứ mệnh của chúng tôi",Phòng Khám Đa Khoa Đông Hiếu không ngừng nâng cao chất lượng dịch vụ để phục vụ khách hàng tốt nhất.
+                                                {newsDetails?.content2}
                                             </p>
                                             <blockquote className="overlay">
                                                 <p>
@@ -152,72 +183,29 @@ const BlogDetails = () => {
                                 {/*/ End Single Widget */}
                                 {/* Single Widget */}
                                 <div className="single-widget recent-post">
-                                    <h3 className="title">Recent post</h3>
-                                    {/* Single Post */}
-                                    <div className="single-post">
-                                        <div className="image">
-                                            <img src={blogS3} alt="#" />
+                                    <h3 className="title">Tin tức khác</h3>
+                                    {news.slice(0, 3).map((item) => (
+                                        <div className="single-post" key={item.id} onClick={() => navigate(`/news/details/${item.id}`, { state: { news: news } })}>
+                                            <div className="image">
+                                                <img src={item.imageUrl} alt="#" />
+                                            </div>
+                                            <div className="content">
+                                                <h5>
+                                                    <a href="#">{item.title}</a>
+                                                </h5>
+                                                <ul className="comment">
+                                                    <li>
+                                                        <i className="fa fa-calendar" aria-hidden="true" />
+                                                        {formatDate(item.date)}
+                                                    </li>
+                                                    <li>
+                                                        <i className="fa fa-commenting-o" aria-hidden="true" />
+                                                        35
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div className="content">
-                                            <h5>
-                                                <a href="#">We have annnocuced our new product.</a>
-                                            </h5>
-                                            <ul className="comment">
-                                                <li>
-                                                    <i className="fa fa-calendar" aria-hidden="true" />
-                                                    Jan 11, 2020
-                                                </li>
-                                                <li>
-                                                    <i className="fa fa-commenting-o" aria-hidden="true" />
-                                                    35
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    {/* End Single Post */}
-                                    {/* Single Post */}
-                                    <div className="single-post">
-                                        <div className="image">
-                                            <img src={blogS1} alt="#" />
-                                        </div>
-                                        <div className="content">
-                                            <h5>
-                                                <a href="#">Top five way for solving teeth problems.</a>
-                                            </h5>
-                                            <ul className="comment">
-                                                <li>
-                                                    <i className="fa fa-calendar" aria-hidden="true" />
-                                                    Mar 05, 2019
-                                                </li>
-                                                <li>
-                                                    <i className="fa fa-commenting-o" aria-hidden="true" />
-                                                    59
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    {/* End Single Post */}
-                                    {/* Single Post */}
-                                    <div className="single-post">
-                                        <div className="image">
-                                            <img src={blogS2} alt="#" />
-                                        </div>
-                                        <div className="content">
-                                            <h5>
-                                                <a href="#">We provide highly business soliutions.</a>
-                                            </h5>
-                                            <ul className="comment">
-                                                <li>
-                                                    <i className="fa fa-calendar" aria-hidden="true" />
-                                                    June 09, 2019
-                                                </li>
-                                                <li>
-                                                    <i className="fa fa-commenting-o" aria-hidden="true" />
-                                                    44
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    ))}
                                     {/* End Single Post */}
                                 </div>
                                 {/*/ End Single Widget */}
@@ -261,4 +249,4 @@ const BlogDetails = () => {
     )
 }
 
-export default BlogDetails
+export default NewsDetail

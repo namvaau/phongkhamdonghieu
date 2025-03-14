@@ -1361,7 +1361,7 @@ Why choose CSS
 
 .news-head {
   width: 100%;
-  height: 250px;
+  height: 350px;
   /* Cố định chiều cao ảnh */
   overflow: hidden;
 }
@@ -1406,7 +1406,7 @@ Why choose CSS
 .why-choose .choose-right {
   height: 100%;
   width: 100%;
-  background-image: url('./assets/img/blog1.jpg');
+  background-image: url('./assets/img/blog-sidebar3.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2893,6 +2893,7 @@ Start Blog CSS
 .news-single .news-head img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .news-single .news-title {
@@ -5263,4 +5264,62 @@ End Footer CSS
 
 .image-section img {
   width: 80%;
+}
+
+.service-details-container {
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.service-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-table th, .service-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.service-table th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+}
+
+.service-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.service-table td .icon-check {
+  color: green;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.search__input {
+  font-family: inherit;
+  font-size: inherit;
+  background-color: #fff;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 30px;
+  width: 14em;
+  transition: all ease-in-out .5s;
+  margin-right: -2rem;
+}
+
+.search__input:focus {
+  outline: none;
+}
+
+.search__input::-webkit-input-placeholder {
+  font-weight: 100;
+  color: #ccc;
+}
+
+.search__input:focus + .search__button {
+  background-color: #f0eeee;
 }

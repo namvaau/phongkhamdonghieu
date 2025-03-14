@@ -1,9 +1,11 @@
-import section from '../assets/img/section-img.png'
+import Breadcrumbs from '../../components/Breadcrumbs'
+import section from '../../assets/img/section-img.png'
 import { useNavigate } from 'react-router-dom'
+import type { News } from '../../interface/InterfaceData'
 import { useEffect, useState } from 'react'
-import { News } from '../interface/InterfaceData'
 import axios from 'axios'
-const Blogs = () => {
+
+const News = () => {
     const navigate = useNavigate();
     const [news, setNews] = useState<News[]>([]);
 
@@ -14,7 +16,6 @@ const Blogs = () => {
         };
         getNews();
     }, []);
-
     const formatDate = (dateString: string) => {
         const date = new Date(dateString);
         return new Intl.DateTimeFormat("vi-VN", {
@@ -23,8 +24,10 @@ const Blogs = () => {
             year: "numeric"
         }).format(date);
     };
+
     return (
         <>
+            <Breadcrumbs title='Tin tức' />
             <section className="blog section" id="blog">
                 <div className="container">
                     <div className="row">
@@ -39,7 +42,7 @@ const Blogs = () => {
                         </div>
                     </div>
                     <div className="row">
-                        {news.slice(0, 3).map((item) => (
+                        {news.map((item) => (
                             <div
                                 key={item.id}
                                 className="col-lg-4 col-md-6 col-12"
@@ -64,9 +67,8 @@ const Blogs = () => {
                     </div>
                 </div>
             </section>
-
         </>
     )
 }
 
-export default Blogs
+export default News
