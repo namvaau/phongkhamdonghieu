@@ -6,13 +6,15 @@ import 'swiper/css';
 
 import banner1 from '../assets/img/slider.jpg';
 import banner2 from '../assets/img/slider2.jpg';
+import banner4 from '../assets/img/slider3.jpg';
 import banner3 from '../assets/img/slider1.jpg';
 
 const Slider = () => {
     const slides = [
-        { id: 1, img: banner1, title: "Ngày Thầy Thuốc Việt Nam 27/2/2025", btnText: "Xem Chi Tiết" },
-        { id: 2, img: banner3, title: "Ngày Thầy Thuốc Việt Nam 27/2/2025", btnText: "Xem Chi Tiết" },
+        { id: 1, img: banner3, title: "Ngày Thầy Thuốc Việt Nam 27/2/2025", btnText: "Xem Chi Tiết" },
+        { id: 2, img: banner1, title: "Ngày Thầy Thuốc Việt Nam 27/2/2025", btnText: "Xem Chi Tiết" },
         { id: 3, img: banner2, title: "Ngày Thầy Thuốc Việt Nam 27/2/2025", btnText: "Xem Chi Tiết" },
+        { id: 3, img: banner4, title: "Ngày Thầy Thuốc Việt Nam 27/2/2025", btnText: "Xem Chi Tiết" },
     ];
 
     return (
