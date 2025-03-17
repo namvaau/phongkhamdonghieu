@@ -15,14 +15,14 @@ const ServicesDetails = () => {
 
     useEffect(() => {
         if (!service) {
-            axios.get(`http://localhost:8080/services/${id}`)
+            axios.get(`https://pkdkdonghieube.onrender.com/services/${id}`)
                 .then((res) => setService(res.data))
                 .catch((err) => console.error("Lỗi khi lấy dữ liệu:", err));
         }
     }, [id, service]);
 
     useEffect(() => {
-        fetch("http://localhost:8080/services") // API backend
+        fetch("https://pkdkdonghieube.onrender.com/services") // API backend
             .then((res) => res.json())
             .then((data) => setServices(data))
             .catch((error) => console.error("Error fetching services:", error));

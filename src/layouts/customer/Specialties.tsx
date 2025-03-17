@@ -9,7 +9,7 @@ const Specialties = () => {
 
     useEffect(() => {
         axios
-            .get("http://localhost:8080/specialties")
+            .get("https://pkdkdonghieube.onrender.com/specialties")
             .then((response) => {
                 setSpecialties(response.data);
             })

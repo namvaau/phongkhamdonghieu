@@ -61,7 +61,7 @@ const Doctors = () => {
   const [error, setError] = useState(null);
   useEffect(() => {
     axios
-      .get("http://localhost:8080/doctors")
+      .get("https://pkdkdonghieube.onrender.com/doctors")
       .then((response) => {
         setDoctors(response.data);
       })

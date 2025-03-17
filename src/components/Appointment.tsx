@@ -25,7 +25,7 @@ const Appointment = () => {
 
     useEffect(() => {
         axios
-            .get("http://localhost:8080/specialties")
+            .get("https://pkdkdonghieube.onrender.com/specialties")
             .then((response) => {
                 setSpecialties(response.data);
             })
@@ -36,7 +36,7 @@ const Appointment = () => {
 
     useEffect(() => {
         axios
-            .get("http://localhost:8080/doctors")
+            .get("https://pkdkdonghieube.onrender.com/doctors")
             .then((response) => {
                 setDoctors(response.data);
             })
@@ -66,7 +66,7 @@ const Appointment = () => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            const response = await fetch("http://localhost:8080/api/send-email", {
+            const response = await fetch("https://pkdkdonghieube.onrender.com/api/send-email", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
