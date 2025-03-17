@@ -9,7 +9,7 @@ const Blogs = () => {
 
     useEffect(() => {
         const getNews = async () => {
-            const response = await axios.get("https://pkdkdonghieube.onrender.com/news");
+            const response = await axios.get("http://localhost:8080/news");
             setNews(response.data);
         };
         getNews();

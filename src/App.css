@@ -1940,7 +1940,6 @@ Start Testimonials CSS
   border-radius: 3px;
   margin: 0 0 0 -52px;
   margin-top: 49px;
-  box-sizing: ;
 }
 
 .testimonials .owl-dots .owl-dot {
@@ -5322,4 +5321,29 @@ End Footer CSS
 
 .search__input:focus + .search__button {
   background-color: #f0eeee;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
+@media (max-width: 450px) {
+  .video-container {
+      padding-top: 75%; /* Tăng chiều cao video cho màn hình nhỏ */
+      border-radius: 5px;
+  }
 }

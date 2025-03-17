@@ -12,12 +12,9 @@ const Call = () => {
                                 </p>
 
                                 <div className="button">
-                                    <a href="#" className="btn">
+                                    <a href="tel:0975161115" className="btn">
                                         Liên Hệ Ngay
-                                    </a>
-                                    <a href="#" className="btn second">
-                                        Xem Thêm
-                                        <i className="fa fa-long-arrow-right" />
+                                        <i className="fa fa-long-arrow-right" style={{marginLeft: '5px'}} />
                                     </a>
                                 </div>
                             </div>

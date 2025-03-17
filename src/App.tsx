@@ -17,6 +17,8 @@ import Specialty from './layouts/customer/Specialty';
 import Specialties from './layouts/customer/Specialties';
 import NewsDetail from './layouts/customer/NewsDetail';
 import News from './layouts/customer/News';
+import ScrollToTop from './components/ScrollToTop';
+import Video from './layouts/customer/Video';
 
 const CustomerLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
@@ -45,6 +47,7 @@ const App: React.FC = () => {
   }
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         {/* Customer Routes */}
         <Route path="/" element={<CustomerLayout><IndexCustomer /></CustomerLayout>} />
@@ -53,12 +56,13 @@ const App: React.FC = () => {
         <Route path="/news/details/:id" element={<CustomerLayout><NewsDetail /></CustomerLayout>} />
         <Route path="/services" element={<CustomerLayout><Services /></CustomerLayout>} />
         <Route path="/specialties" element={<CustomerLayout><Specialties /></CustomerLayout>} />
-        <Route path="/services/details/*" element={<CustomerLayout><ServicesDetails /></CustomerLayout>} />
+        <Route path="/services/details/:id" element={<CustomerLayout><ServicesDetails /></CustomerLayout>} />
         <Route path="/urgent" element={<CustomerLayout><Urgent /></CustomerLayout>} />
         <Route path="/specialty" element={<CustomerLayout><Specialty /></CustomerLayout>} />
         <Route path="/doctors" element={<CustomerLayout><Doctors /></CustomerLayout>} />
         <Route path="/booking" element={<CustomerLayout><Booking /></CustomerLayout>} />
         <Route path="/about" element={<CustomerLayout><AboutUs /></CustomerLayout>} />
+        <Route path="/video" element={<CustomerLayout><Video /></CustomerLayout>} />
         <Route path="*" element={<CustomerLayout><NotFound404 /></CustomerLayout>} />
       </Routes>
     </Router>

@@ -7,7 +7,7 @@ const Services = () => {
     const [services, setServices] = useState<Service[]>([]);
     const navigate = useNavigate();
     useEffect(() => {
-        fetch("https://pkdkdonghieube.onrender.com/services") // API backend
+        fetch("http://localhost:8080/services") // API backend
             .then((res) => res.json())
             .then((data) => setServices(data))
             .catch((error) => console.error("Error fetching services:", error));

@@ -29,7 +29,7 @@ const Header = () => {
                             </div>
                             <div className="col-lg-6 col-md-7 col-12">
                                 <ul className="top-contact">
-                                    <li><i className="fa fa-phone" /> 097 516 11 15</li>
+                                    <li><a href="tel:0975161115"><i className="fa fa-phone" /> 0975 161 115</a></li>
                                     <li>
                                         <i className="fa fa-envelope" />
                                         <a href="mailto:phongkhamdkdonghieu@gmail.com">phongkhamdkdonghieu@gmail.com</a>
@@ -82,6 +82,7 @@ const Header = () => {
                                             <li><Link to="/specialties" onClick={() => setIsOpen(false)}>Chuyên Khoa</Link></li>
                                             <li><Link to="/services" onClick={() => setIsOpen(false)}>Dịch Vụ</Link></li>
                                             <li><Link to="/news" onClick={() => setIsOpen(false)}>Tin Tức</Link></li>
+                                            <li><Link to="/video" onClick={() => setIsOpen(false)}>Video</Link></li>
                                             <li><Link to="/contact" onClick={() => setIsOpen(false)}>Liên Hệ</Link></li>
                                         </ul>
                                     </div>
@@ -100,13 +101,11 @@ const Header = () => {
                                                     </ul>
                                                 </li>
                                                 <li><Link to="/services">Dịch Vụ</Link></li>
-                                                {/* <li>
-                                                    <Link to="#">Pages <i className="icofont-rounded-down" /></Link>
+                                                <li><Link to="/news">Tin Tức <i className="icofont-rounded-down" /></Link>
                                                     <ul className="dropdown">
-                                                        <li><Link to="/404">404 Error</Link></li>
+                                                        <li><Link to="/video">Video</Link></li>
                                                     </ul>
-                                                </li> */}
-                                                <li><Link to="/news">Tin Tức</Link></li>
+                                                </li>
                                                 <li><Link to="/contact">Liên Hệ</Link></li>
                                             </ul>
                                         </nav>

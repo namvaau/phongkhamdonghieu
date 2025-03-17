@@ -10,7 +10,7 @@ const NewsDetail = () => {
     const [newsDetails, setNewsDetails] = useState<NewsDetail | null>();
 
     useEffect(() => {
-        axios.get(`https://pkdkdonghieube.onrender.com/news/${id}/details`)
+        axios.get(`http://localhost:8080/news/${id}/details`)
             .then((res) => {
                 console.log("Dữ liệu từ API:", res.data[0]);
                 setNewsDetails(res.data[0]);
@@ -22,7 +22,7 @@ const NewsDetail = () => {
 
     useEffect(() => {
         const getNews = async () => {
-            const response = await axios.get("https://pkdkdonghieube.onrender.com/news");
+            const response = await axios.get("http://localhost:8080/news");
             setNews(response.data);
         };
         getNews();

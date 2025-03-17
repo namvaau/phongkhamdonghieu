@@ -1,6 +1,86 @@
+import { useEffect, useState } from "react";
 import section from "../assets/img/section-img.png";
+import { Doctor, Specialty } from "../interface/InterfaceData";
+import axios from "axios";
 
 const Appointment = () => {
+    const [specialties, setSpecialties] = useState<Specialty[]>([]);
+    const [doctors, setDoctors] = useState<Doctor[]>([]);
+    const [error, setError] = useState(null);
+    const [selected, setSelected] = useState("Chuyên khoa");
+    const [selectedDoctor, setSelectedDoctor] = useState("Bác sĩ");
+    const [isOpen, setIsOpen] = useState(false);
+    const [isOpenDoctor, setIsOpenDoctor] = useState(false);
+
+    const handleSelect = (name: string) => {
+        setSelected(name);
+        setIsOpen(false);
+    };
+
+    const handleSelectDoctor = (name: string) => {
+        setSelectedDoctor(name);
+        setIsOpenDoctor(false);
+    };
+
+
+    useEffect(() => {
+        axios
+            .get("http://localhost:8080/specialties")
+            .then((response) => {
+                setSpecialties(response.data);
+            })
+            .catch((err) => {
+                setError(err.message);
+            });
+    }, []);
+
+    useEffect(() => {
+        axios
+            .get("http://localhost:8080/doctors")
+            .then((response) => {
+                setDoctors(response.data);
+            })
+            .catch((err) => {
+                setError(err.message);
+            });
+    }, []);
+
+    const filteredDoctors = selected === "Chuyên khoa"
+        ? doctors // Nếu chưa chọn thì hiển thị tất cả
+        : doctors.filter((doctor) => doctor.speciality === selected);
+
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        specialty: selected,
+        doctor: selectedDoctor,
+        date: "",
+        message: "",
+    });
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        try {
+            const response = await fetch("http://localhost:8080/api/send-email", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                alert("Đặt lịch thành công! Vui lòng kiểm tra email.");
+            } else {
+                alert("Có lỗi xảy ra!");
+            }
+        } catch (error) {
+            console.error("Lỗi khi gửi email:", error);
+        }
+    };
     return (
         <>
             <section className="appointment" style={{ paddingBottom: '50px' }}>
@@ -18,71 +98,66 @@ const Appointment = () => {
                     </div>
                     <div className="row">
                         <div className="col-lg-12 col-md-12 col-12">
-                            <form className="form" action="#">
+                            <form className="form" onSubmit={handleSubmit}>
                                 <div className="row">
                                     <div className="col-lg-6 col-md-6 col-12">
                                         <div className="form-group">
-                                            <input name="name" type="text" placeholder="Họ và tên" />
+                                            <input name="name" type="text" placeholder="Họ và tên" onChange={handleChange} required />
                                         </div>
                                     </div>
                                     <div className="col-lg-6 col-md-6 col-12">
                                         <div className="form-group">
-                                            <input name="email" type="email" placeholder="Email" />
+                                            <input name="email" type="email" placeholder="Email" onChange={handleChange} required />
                                         </div>
                                     </div>
                                     <div className="col-lg-6 col-md-6 col-12">
                                         <div className="form-group">
-                                            <input name="phone" type="text" placeholder="Số điện thoại" />
+                                            <input name="phone" type="text" placeholder="Số điện thoại" onChange={handleChange} required />
                                         </div>
                                     </div>
                                     <div className="col-lg-6 col-md-6 col-12">
                                         <div className="form-group">
-                                            <div className="nice-select form-control wide" tabIndex={0}>
-                                                <span className="current">Chuyên khoa</span>
+                                            <div className={`nice-select form-control wide ${isOpen ? "open" : ""}`} tabIndex={0} onClick={() => setIsOpen(!isOpen)}>
+                                                <span className="current">{selected}</span>
                                                 <ul className="list">
-                                                    <li data-value={1} className="option selected">
+                                                    <li data-value="" className="option selected" onClick={() => handleSelect("Chuyên khoa")}>
                                                         Chuyên khoa
                                                     </li>
-                                                    <li data-value={2} className="option">
-                                                        Tim mạch
-                                                    </li>
-                                                    <li data-value={3} className="option">
-                                                        Thần kinh
-                                                    </li>
-                                                    <li data-value={4} className="option">
-                                                        Nha khoa
-                                                    </li>
-                                                    <li data-value={5} className="option">
-                                                        Tiêu hóa
-                                                    </li>
+                                                    {error ? (
+                                                        <li className="option error">Lỗi: {error}</li>
+                                                    ) : (
+                                                        specialties.map((specialty) => (
+                                                            <li key={specialty.id} data-value={specialty.id} className="option" onClick={() => handleSelect(specialty.name)}>
+                                                                {specialty.name}
+                                                            </li>
+                                                        ))
+                                                    )}
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="col-lg-6 col-md-6 col-12">
                                         <div className="form-group">
-                                            <div className="nice-select form-control wide" tabIndex={0}>
-                                                <span className="current">Bác sĩ</span>
+                                            <div className={`nice-select form-control wide ${isOpenDoctor ? "open" : ""}`} tabIndex={0} onClick={() => setIsOpenDoctor(!isOpenDoctor)}>
+                                                <span className="current">{selectedDoctor}</span>
                                                 <ul className="list">
-                                                    <li data-value={1} className="option selected">
-                                                        Chọn bác sĩ
-                                                    </li>
-                                                    <li data-value={2} className="option">
-                                                        BS. Nguyễn Văn A
-                                                    </li>
-                                                    <li data-value={3} className="option">
-                                                        BS. Trần Thị B
-                                                    </li>
-                                                    <li data-value={4} className="option">
-                                                        BS. Lê Văn C
-                                                    </li>
+                                                    {filteredDoctors.length === 0 ? (
+                                                        <li className="option">Không có bác sĩ</li>
+                                                    ) : (
+                                                        filteredDoctors.map((doctor) => (
+                                                            <li key={doctor.id} data-value={doctor.id} className="option"
+                                                                onClick={() => handleSelectDoctor(doctor.name)}>
+                                                                {doctor.name}
+                                                            </li>
+                                                        ))
+                                                    )}
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="col-lg-6 col-md-6 col-12">
                                         <div className="form-group">
-                                            <input type="date" placeholder="Date" id="datepicker" />
+                                            <input name="date" type="date" placeholder="Date" onChange={handleChange} required />
                                         </div>
                                     </div>
                                     <div className="col-lg-12 col-md-12 col-12">
@@ -91,6 +166,7 @@ const Appointment = () => {
                                                 name="message"
                                                 placeholder="Nhập tin nhắn của bạn..."
                                                 defaultValue={""}
+                                                onChange={handleChange} required
                                             />
                                         </div>
                                     </div>

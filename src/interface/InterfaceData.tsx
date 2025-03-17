@@ -10,13 +10,15 @@ export interface Doctor {
     name: string;
     experience: number;
     description: string;
-    specialty: Specialty;
+    speciality: string;
+    imageUrl: string;
 }
 
 export interface ServiceDetail {
     id: number;
     detail: string; // Tên chi tiết dịch vụ
     price: number;  // Giá của chi tiết dịch vụ
+    insurancePrice: number;  // Giá của chi tiết dịch vụ
 }
 
 export interface Service {

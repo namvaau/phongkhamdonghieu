@@ -9,10 +9,65 @@ import Services from '../../components/Services'
 import Blogs from '../../components/Blogs'
 import Appointment from '../../components/Appointment'
 import section from '../../assets/img/section-img.png'
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import client1 from '../../assets/img/client1.png'
+import client2 from '../../assets/img/client2.png'
+import client3 from '../../assets/img/client3.png'
+import client4 from '../../assets/img/client4.png'
+import client5 from '../../assets/img/client5.png'
+
+import { useState } from 'react'
 
 const IndexCustomer = () => {
+    const [isActive, setIsActive] = useState(false);
+
+    const handleGetProClick = () => {
+        setIsActive(!isActive);
+    };
+    const clients = [
+        client1,
+        client2,
+        client3,
+        client4,
+        client5,
+        client1,
+        client2,
+        client3,
+        client4,
+        client5,
+    ];
     return (
         <>
+            <ul className={`pro-features ${isActive ? "active" : ""}`}>
+                <a className="get-pro" onClick={handleGetProClick}>
+                    Liên Hệ
+                </a>
+                <li className="big-title">Phòng Khám Đa Khoa Đông Hiếu</li>
+                <li className="title">Website đang trong quá trình phát triển</li>
+                {/* <li>2+ premade home pages</li>
+                <li>20+ html pages</li>
+                <li>Color Plate With 12+ Colors</li>
+                <li>Sticky Header / Sticky Filters</li>
+                <li>Working Contact Form With Google Map</li> */}
+                <div className="button">
+                    <a
+                        href="http://preview.themeforest.net/item/mediplus-medical-and-doctor-html-template/full_screen_preview/26665910?_ga=2.145092285.888558928.1591971968-344530658.1588061879"
+                        target="_blank"
+                        className="btn"
+                    >
+                        Xem Tin Tức
+                    </a>
+                    <a
+                        href="https://themeforest.net/item/mediplus-medical-and-doctor-html-template/26665910"
+                        target="_blank"
+                        className="btn"
+                    >
+                        Liên Hệ
+                    </a>
+                </div>
+            </ul>
+
             <Slider />
             <Schedule />
             <Feautes />
@@ -20,7 +75,7 @@ const IndexCustomer = () => {
             <Call />
             <WhyChoose />
             <Portfolio />
-            <section className="why-choose section" style={{paddingTop: '0'}}>
+            <section className="why-choose section" style={{ paddingTop: '0' }}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
@@ -91,6 +146,34 @@ const IndexCustomer = () => {
             </section>
             <Facts />
             <Blogs />
+            <div className="clients overlay">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-12 col-md-12 col-12">
+                            <Swiper
+                                slidesPerView={4}
+                                spaceBetween={20}
+                                loop={true}
+                                autoplay={{ delay: 2000 }}
+                                modules={[Autoplay]}
+                                breakpoints={{
+                                    320: { slidesPerView: 2 },
+                                    768: { slidesPerView: 3 },
+                                    1024: { slidesPerView: 4 },
+                                }}
+                            >
+                                {clients.map((image, index) => (
+                                    <SwiperSlide key={index}>
+                                        <div className="single-clients">
+                                            <img src={image} alt={`Client ${index + 1}`} />
+                                        </div>
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <Appointment />
         </>
     )
