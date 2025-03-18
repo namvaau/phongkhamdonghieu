@@ -1,5 +1,6 @@
 // export const BASE_URL = "http://localhost:8080";
-export const BASE_URL = "https://pkdkdonghieube.onrender.com";
+// export const BASE_URL = "https://pkdkdonghieube.onrender.com";
+export const BASE_URL = "https://pkdkdonghieube-production.up.railway.app";
 
 export interface Specialty {
     id: number;

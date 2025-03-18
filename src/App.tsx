@@ -19,6 +19,7 @@ import NewsDetail from './layouts/customer/NewsDetail';
 import News from './layouts/customer/News';
 import ScrollToTop from './components/ScrollToTop';
 import Video from './layouts/customer/Video';
+import NewsForm from './layouts/admin/NewsForm';
 
 const CustomerLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
@@ -63,6 +64,11 @@ const App: React.FC = () => {
         <Route path="/booking" element={<CustomerLayout><Booking /></CustomerLayout>} />
         <Route path="/about" element={<CustomerLayout><AboutUs /></CustomerLayout>} />
         <Route path="/video" element={<CustomerLayout><Video /></CustomerLayout>} />
+
+
+        <Route path="/admin/createnews" element={<CustomerLayout><NewsForm /></CustomerLayout>} />
+
+
         <Route path="*" element={<CustomerLayout><NotFound404 /></CustomerLayout>} />
       </Routes>
     </Router>

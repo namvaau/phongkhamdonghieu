@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom'
 import logo  from '../assets/img/logo.png'
 const Footer = () => {
     return (
@@ -81,10 +82,10 @@ const Footer = () => {
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">
+                                                    <Link to={'/admin/createnews'}>
                                                         <i className="fa fa-caret-right" aria-hidden="true" />
-                                                        Cộng Đồng
-                                                    </a>
+                                                        Đăng Bài
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </div>
