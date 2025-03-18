@@ -1,7 +1,7 @@
 import Breadcrumbs from '../../components/Breadcrumbs'
 import section from '../../assets/img/section-img.png'
 import { useNavigate } from 'react-router-dom'
-import type { News } from '../../interface/InterfaceData'
+import { BASE_URL, type News } from '../../interface/InterfaceData'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 
@@ -11,11 +11,12 @@ const News = () => {
 
     useEffect(() => {
         const getNews = async () => {
-            const response = await axios.get("https://pkdkdonghieube.onrender.com/news");
+            const response = await axios.get(`${BASE_URL}/news`);
             setNews(response.data);
         };
         getNews();
     }, []);
+
     const formatDate = (dateString: string) => {
         const date = new Date(dateString);
         return new Intl.DateTimeFormat("vi-VN", {
@@ -24,6 +25,8 @@ const News = () => {
             year: "numeric"
         }).format(date);
     };
+
+    const sortedNews = [...news].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
     return (
         <>
@@ -42,7 +45,7 @@ const News = () => {
                         </div>
                     </div>
                     <div className="row">
-                        {news.map((item) => (
+                        {sortedNews.map((item) => (
                             <div
                                 key={item.id}
                                 className="col-lg-4 col-md-6 col-12"

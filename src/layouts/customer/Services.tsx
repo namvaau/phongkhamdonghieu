@@ -1,13 +1,13 @@
 import Breadcrumbs from '../../components/Breadcrumbs'
 import section from '../../assets/img/section-img.png'
 import { useEffect, useState } from 'react';
-import { Service } from '../../interface/InterfaceData';
+import { BASE_URL, Service } from '../../interface/InterfaceData';
 import { useNavigate } from 'react-router-dom';
 const Services = () => {
     const [services, setServices] = useState<Service[]>([]);
     const navigate = useNavigate();
     useEffect(() => {
-        fetch("https://pkdkdonghieube.onrender.com/services") // API backend
+        fetch(`${BASE_URL}/services`) // API backend
             .then((res) => res.json())
             .then((data) => setServices(data))
             .catch((error) => console.error("Error fetching services:", error));

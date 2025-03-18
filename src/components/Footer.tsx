@@ -22,7 +22,7 @@ const Footer = () => {
                                     {/* Social */}
                                     <ul className="social">
                                         <li>
-                                            <a href="#">
+                                            <a href="https://www.facebook.com/ytesuckhoe.dh" target='_blank'>
                                                 <i className="icofont-facebook" />
                                             </a>
                                         </li>

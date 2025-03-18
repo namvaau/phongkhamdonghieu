@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link
+import { Link, useLocation } from 'react-router-dom'; // Import Link
 import logo from '../assets/img/logo.png';
 
 const Header = () => {
     const [isSticky, setIsSticky] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
-
+    const location = useLocation();
     useEffect(() => {
         const handleScroll = () => {
             setIsSticky(window.scrollY > 200);
@@ -92,21 +92,35 @@ const Header = () => {
                                     <div className="main-menu">
                                         <nav className="navigation">
                                             <ul className="nav menu">
-                                                <li className="active">
+                                                <li className={location.pathname === "/" ? "active" : ""}>
                                                     <Link to="/">Trang Chủ</Link>
                                                 </li>
-                                                <li><Link to="/specialties">Chuyên Khoa <i className="icofont-rounded-down"></i></Link>
+                                                <li className={location.pathname.startsWith("/specialties") ? "active" : ""}>
+                                                    <Link to="/specialties">
+                                                        Chuyên Khoa <i className="icofont-rounded-down"></i>
+                                                    </Link>
                                                     <ul className="dropdown">
-                                                        <li><Link to="/doctors">Bác Sĩ</Link></li>
+                                                        <li className={location.pathname === "/doctors" ? "active" : ""}>
+                                                            <Link to="/doctors">Bác Sĩ</Link>
+                                                        </li>
                                                     </ul>
                                                 </li>
-                                                <li><Link to="/services">Dịch Vụ</Link></li>
-                                                <li><Link to="/news">Tin Tức <i className="icofont-rounded-down" /></Link>
+                                                <li className={location.pathname === "/services" ? "active" : ""}>
+                                                    <Link to="/services">Dịch Vụ</Link>
+                                                </li>
+                                                <li className={location.pathname.startsWith("/news") ? "active" : ""}>
+                                                    <Link to="/news">
+                                                        Tin Tức <i className="icofont-rounded-down"></i>
+                                                    </Link>
                                                     <ul className="dropdown">
-                                                        <li><Link to="/video">Video</Link></li>
+                                                        <li className={location.pathname === "/video" ? "active" : ""}>
+                                                            <Link to="/video">Video</Link>
+                                                        </li>
                                                     </ul>
                                                 </li>
-                                                <li><Link to="/contact">Liên Hệ</Link></li>
+                                                <li className={location.pathname === "/contact" ? "active" : ""}>
+                                                    <Link to="/contact">Liên Hệ</Link>
+                                                </li>
                                             </ul>
                                         </nav>
                                     </div>

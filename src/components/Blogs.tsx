@@ -1,7 +1,7 @@
 import section from '../assets/img/section-img.png'
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { News } from '../interface/InterfaceData'
+import { BASE_URL, News } from '../interface/InterfaceData'
 import axios from 'axios'
 const Blogs = () => {
     const navigate = useNavigate();
@@ -9,11 +9,13 @@ const Blogs = () => {
 
     useEffect(() => {
         const getNews = async () => {
-            const response = await axios.get("https://pkdkdonghieube.onrender.com/news");
+            const response = await axios.get(`${BASE_URL}/news`);
             setNews(response.data);
         };
         getNews();
     }, []);
+
+    const sortedNews = [...news].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
     const formatDate = (dateString: string) => {
         const date = new Date(dateString);
@@ -39,7 +41,7 @@ const Blogs = () => {
                         </div>
                     </div>
                     <div className="row">
-                        {news.slice(0, 3).map((item) => (
+                        {sortedNews.slice(0, 3).map((item) => (
                             <div
                                 key={item.id}
                                 className="col-lg-4 col-md-6 col-12"

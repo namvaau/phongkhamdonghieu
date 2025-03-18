@@ -18,6 +18,7 @@ import client4 from '../../assets/img/client4.png'
 import client5 from '../../assets/img/client5.png'
 
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const IndexCustomer = () => {
     const [isActive, setIsActive] = useState(false);
@@ -51,20 +52,18 @@ const IndexCustomer = () => {
                 <li>Sticky Header / Sticky Filters</li>
                 <li>Working Contact Form With Google Map</li> */}
                 <div className="button">
-                    <a
-                        href="http://preview.themeforest.net/item/mediplus-medical-and-doctor-html-template/full_screen_preview/26665910?_ga=2.145092285.888558928.1591971968-344530658.1588061879"
-                        target="_blank"
+                    <Link
+                        to={'/news'}
                         className="btn"
                     >
                         Xem Tin Tức
-                    </a>
-                    <a
-                        href="https://themeforest.net/item/mediplus-medical-and-doctor-html-template/26665910"
-                        target="_blank"
+                    </Link>
+                    <Link
+                        to={'/contact'}
                         className="btn"
                     >
-                        Liên Hệ
-                    </a>
+                        Liên hệ
+                    </Link>
                 </div>
             </ul>
 

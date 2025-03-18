@@ -1,6 +1,7 @@
 import Breadcrumbs from "../../components/Breadcrumbs";
 import logo from '../../assets/img/author1.jpg'
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const Video = () => {
     const videos = [
         {
@@ -131,6 +132,14 @@ const Video = () => {
                                                 </div>
                                             </div>
                                         ))}
+                                </div>
+                                <div className="single-widget category">
+                                    <h3 className="title">Danh Mục</h3>
+                                    <ul className="categor-list">
+                                        <li>
+                                            <Link to={'/news'}>Tin Tức</Link>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>

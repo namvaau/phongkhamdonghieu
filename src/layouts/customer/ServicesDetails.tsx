@@ -2,7 +2,7 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Service } from '../../interface/InterfaceData';
+import { BASE_URL, Service } from '../../interface/InterfaceData';
 
 const ServicesDetails = () => {
     const { id } = useParams(); // Lấy ID từ URL
@@ -15,14 +15,14 @@ const ServicesDetails = () => {
 
     useEffect(() => {
         if (!service) {
-            axios.get(`https://pkdkdonghieube.onrender.com/services/${id}`)
+            axios.get(`${BASE_URL}/services/${id}`)
                 .then((res) => setService(res.data))
                 .catch((err) => console.error("Lỗi khi lấy dữ liệu:", err));
         }
     }, [id, service]);
 
     useEffect(() => {
-        fetch("https://pkdkdonghieube.onrender.com/services") // API backend
+        fetch(`${BASE_URL}/services`) // API backend
             .then((res) => res.json())
             .then((data) => setServices(data))
             .catch((error) => console.error("Error fetching services:", error));
@@ -61,16 +61,18 @@ const ServicesDetails = () => {
                                 </div> */}
 
                                 {/* Ô tìm kiếm */}
-                                <div className="search-bar" style={{ margin: '20px 0', outline: 'none' }}>
-                                    <input
-                                        className='search__input'
-                                        type="text"
-                                        placeholder="Tìm kiếm dịch vụ..."
-                                        value={searchTerm}
-                                        onChange={(e) => setSearchTerm(e.target.value)}
-                                    />
+                                <div className="row">
+                                    <div className="col-lg-4 col-12">
+                                        <div className="main-sidebar">
+                                            <div className="single-widget search">
+                                                <div className="form" style={{display: 'flex', alignItems: 'center'}}>
+                                                    <input type="text" placeholder="Tìm kiếm..." value={searchTerm}
+                                                        onChange={(e) => setSearchTerm(e.target.value)} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
                                 <div className="body-text">
                                     <div className="service-details-container">
                                         <table className="service-table">
@@ -112,39 +114,39 @@ const ServicesDetails = () => {
                 <div className="container">
                     <div className="row">
                         {services
-                        .filter((service) => service.id !== currentServiceId)
-                        .map((service) => (
-                            <div className="col-lg-4 col-md-12 col-12" key={service.id}>
-                                <div className="single-table">
-                                    {/* Table Head */}
-                                    <div className="table-head">
-                                        <div className="icon">
-                                            <i className="icofont-stethoscope-alt"></i>
+                            .filter((service) => service.id !== currentServiceId)
+                            .map((service) => (
+                                <div className="col-lg-4 col-md-12 col-12" key={service.id}>
+                                    <div className="single-table">
+                                        {/* Table Head */}
+                                        <div className="table-head">
+                                            <div className="icon">
+                                                <i className="icofont-stethoscope-alt"></i>
+                                            </div>
+                                            <h4 className="title">{service.name}</h4>
+                                            <div className="price">
+                                            </div>
                                         </div>
-                                        <h4 className="title">{service.name}</h4>
-                                        <div className="price">
+
+                                        {/* Table List */}
+                                        <ul className="table-list">
+                                            {service.serviceDetails.slice(0, 5).map((detail) => (
+                                                <li key={detail.id}>
+                                                    <i className="icofont icofont-ui-check" /> {detail.detail} - {detail.price.toLocaleString()}đ
+                                                </li>
+                                            ))}
+                                        </ul>
+
+
+                                        {/* Table Bottom */}
+                                        <div className="table-bottom">
+                                            <a className="btn" style={{ color: '#fff' }} onClick={() => navigate(`/services/details/${service.id}`, { state: { service } })}>
+                                                Xem Chi Tiết
+                                            </a>
                                         </div>
-                                    </div>
-
-                                    {/* Table List */}
-                                    <ul className="table-list">
-                                        {service.serviceDetails.slice(0, 5).map((detail) => (
-                                            <li key={detail.id}>
-                                                <i className="icofont icofont-ui-check" /> {detail.detail} - {detail.price.toLocaleString()}đ
-                                            </li>
-                                        ))}
-                                    </ul>
-
-
-                                    {/* Table Bottom */}
-                                    <div className="table-bottom">
-                                        <a className="btn" style={{ color: '#fff' }} onClick={() => navigate(`/services/details/${service.id}`, { state: { service } })}>
-                                            Xem Chi Tiết
-                                        </a>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
                     </div>
                 </div>
             </section>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import section from "../assets/img/section-img.png";
-import { Doctor, Specialty } from "../interface/InterfaceData";
+import { BASE_URL, Doctor, Specialty } from "../interface/InterfaceData";
 import axios from "axios";
 
 const Appointment = () => {
@@ -25,7 +25,7 @@ const Appointment = () => {
 
     useEffect(() => {
         axios
-            .get("https://pkdkdonghieube.onrender.com/specialties")
+            .get(`${BASE_URL}/specialties`)
             .then((response) => {
                 setSpecialties(response.data);
             })
@@ -36,7 +36,7 @@ const Appointment = () => {
 
     useEffect(() => {
         axios
-            .get("https://pkdkdonghieube.onrender.com/doctors")
+            .get(`${BASE_URL}/doctors`)
             .then((response) => {
                 setDoctors(response.data);
             })
@@ -66,7 +66,7 @@ const Appointment = () => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            const response = await fetch("https://pkdkdonghieube.onrender.com/api/send-email", {
+            const response = await fetch(`${BASE_URL}/api/send-email`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),

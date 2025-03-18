@@ -1,7 +1,7 @@
 import Breadcrumbs from "../../components/Breadcrumbs";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Doctor } from "../../interface/InterfaceData";
+import { BASE_URL, Doctor } from "../../interface/InterfaceData";
 
 
 // const doctors = [
@@ -61,7 +61,7 @@ const Doctors = () => {
   const [error, setError] = useState(null);
   useEffect(() => {
     axios
-      .get("https://pkdkdonghieube.onrender.com/doctors")
+      .get(`${BASE_URL}/doctors`)
       .then((response) => {
         setDoctors(response.data);
       })

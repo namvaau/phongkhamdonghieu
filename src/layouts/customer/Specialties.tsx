@@ -2,14 +2,14 @@ import Breadcrumbs from '../../components/Breadcrumbs'
 import section from '../../assets/img/section-img.png'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Specialty } from '../../interface/InterfaceData';
+import { BASE_URL, Specialty } from '../../interface/InterfaceData';
 const Specialties = () => {
     const [specialties, setSpecialties] = useState<Specialty[]>([]);
     const [error, setError] = useState(null);
 
     useEffect(() => {
         axios
-            .get("https://pkdkdonghieube.onrender.com/specialties")
+            .get(`${BASE_URL}/specialties`)
             .then((response) => {
                 setSpecialties(response.data);
             })

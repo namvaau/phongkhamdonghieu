@@ -1,7 +1,7 @@
 import Breadcrumbs from '../../components/Breadcrumbs'
 import author from '../../assets/img/author1.jpg'
-import { useNavigate, useParams } from 'react-router-dom'
-import type { News, NewsDetail } from '../../interface/InterfaceData'
+import { Link, useNavigate, useParams } from 'react-router-dom'
+import { BASE_URL, type News, type NewsDetail } from '../../interface/InterfaceData'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 
@@ -10,7 +10,7 @@ const NewsDetail = () => {
     const [newsDetails, setNewsDetails] = useState<NewsDetail | null>();
 
     useEffect(() => {
-        axios.get(`https://pkdkdonghieube.onrender.com/news/${id}/details`)
+        axios.get(`${BASE_URL}/news/${id}/details`)
             .then((res) => {
                 console.log("Dữ liệu từ API:", res.data[0]);
                 setNewsDetails(res.data[0]);
@@ -22,7 +22,7 @@ const NewsDetail = () => {
 
     useEffect(() => {
         const getNews = async () => {
-            const response = await axios.get("https://pkdkdonghieube.onrender.com/news");
+            const response = await axios.get(`${BASE_URL}/news`);
             setNews(response.data);
         };
         getNews();
@@ -37,6 +37,8 @@ const NewsDetail = () => {
             year: "numeric"
         }).format(date);
     };
+
+    const sortedNews = [...news].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 
     return (
@@ -88,12 +90,8 @@ const NewsDetail = () => {
                                         </div>
                                         {/* News Text */}
                                         <div className="news-text">
-                                            <p>
-                                                {newsDetails?.content}
-                                            </p>
-                                            <p>
-                                                {newsDetails?.content2}
-                                            </p>
+                                            <p dangerouslySetInnerHTML={{ __html: newsDetails?.content ?? "" }}></p>
+                                            <p dangerouslySetInnerHTML={{ __html: newsDetails?.content1 ?? "" }}></p>
                                             <div className="image-gallery">
                                                 <div className="row">
                                                     <div className="col-lg-6 col-md-6 col-12">
@@ -108,9 +106,7 @@ const NewsDetail = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <p>
-                                                {newsDetails?.content2}
-                                            </p>
+                                            <p dangerouslySetInnerHTML={{ __html: newsDetails?.content2 ?? "" }}></p>
                                             <blockquote className="overlay">
                                                 <p>
                                                     "Phòng Khám Đông Hiếu - Y Đức Tạo Niềm Tin!"
@@ -161,22 +157,10 @@ const NewsDetail = () => {
                                 {/*/ End Single Widget */}
                                 {/* Single Widget */}
                                 <div className="single-widget category">
-                                    <h3 className="title">Blog Categories</h3>
+                                    <h3 className="title">Danh Mục</h3>
                                     <ul className="categor-list">
                                         <li>
-                                            <a href="#">Men's Apparel</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Women's Apparel</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Bags Collection</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Accessories</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Sun Glasses</a>
+                                            <Link to={'/video'}>Video</Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -184,28 +168,30 @@ const NewsDetail = () => {
                                 {/* Single Widget */}
                                 <div className="single-widget recent-post">
                                     <h3 className="title">Tin tức khác</h3>
-                                    {news.slice(0, 3).map((item) => (
-                                        <div className="single-post" key={item.id} onClick={() => navigate(`/news/details/${item.id}`, { state: { news: news } })}>
-                                            <div className="image">
-                                                <img src={item.imageUrl} alt="#" />
+                                    {sortedNews
+                                        .filter((news) => news.id !== Number(id))
+                                        .slice(0, 3).map((item) => (
+                                            <div className="single-post" key={item.id} onClick={() => navigate(`/news/details/${item.id}`, { state: { news: news } })}>
+                                                <div className="image">
+                                                    <img src={item.imageUrl} alt="#" />
+                                                </div>
+                                                <div className="content">
+                                                    <h5>
+                                                        <a href="#">{item.title}</a>
+                                                    </h5>
+                                                    <ul className="comment">
+                                                        <li>
+                                                            <i className="fa fa-calendar" aria-hidden="true" />
+                                                            {formatDate(item.date)}
+                                                        </li>
+                                                        <li>
+                                                            <i className="fa fa-commenting-o" aria-hidden="true" />
+                                                            35
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                            <div className="content">
-                                                <h5>
-                                                    <a href="#">{item.title}</a>
-                                                </h5>
-                                                <ul className="comment">
-                                                    <li>
-                                                        <i className="fa fa-calendar" aria-hidden="true" />
-                                                        {formatDate(item.date)}
-                                                    </li>
-                                                    <li>
-                                                        <i className="fa fa-commenting-o" aria-hidden="true" />
-                                                        35
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    ))}
+                                        ))}
                                     {/* End Single Post */}
                                 </div>
                                 {/*/ End Single Widget */}

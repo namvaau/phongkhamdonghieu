@@ -1,3 +1,6 @@
+export const BASE_URL = "http://localhost:8080";
+// export const BASE_URL = "https://pkdkdonghieube.onrender.com";
+
 export interface Specialty {
     id: number;
     name: string;
