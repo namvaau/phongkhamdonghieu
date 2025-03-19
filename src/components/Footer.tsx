@@ -1,7 +1,11 @@
-
-import { Link } from 'react-router-dom'
-import logo  from '../assets/img/logo.png'
+import { Link, useNavigate } from 'react-router-dom';
+import logo from '../assets/img/logo.png'
 const Footer = () => {
+    const navigate = useNavigate();
+    const handleLogout = () => {
+        localStorage.removeItem("tokenpkdkdh");
+        navigate("/");
+    };
     return (
         <>
             <footer id="footer" className="footer ">
@@ -16,7 +20,7 @@ const Footer = () => {
                                             <img src={logo} alt="#" className='round-image' />
                                         </a>
                                     </div>
-                                    <p style={{padding: '10px 0'}}>
+                                    <p style={{ padding: '10px 0' }}>
                                         Đông Hiếu, Thái Hòa, Nghệ An <br />
                                         ĐT: 097 516 11 15
                                     </p>
@@ -80,12 +84,6 @@ const Footer = () => {
                                                         <i className="fa fa-caret-right" aria-hidden="true" />
                                                         Về Chúng Tôi
                                                     </a>
-                                                </li>
-                                                <li>
-                                                    <Link to={'/admin/createnews'}>
-                                                        <i className="fa fa-caret-right" aria-hidden="true" />
-                                                        Đăng Bài
-                                                    </Link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -159,6 +157,15 @@ const Footer = () => {
                                             <i className="icofont icofont-paper-plane" />
                                         </button>
                                     </form>
+                                    {localStorage.getItem("tokenpkdkdh") ? (
+                                        <div onClick={handleLogout} style={{ margin: '20px 0' }} className="btn">
+                                            Đăng Xuất
+                                        </div>
+                                    ) : (
+                                        <Link to="/login" style={{ margin: '20px 0', color: '#fff' }} className="btn">
+                                            Đăng Nhập Admin
+                                        </Link>
+                                    )}
                                 </div>
                             </div>
                         </div>

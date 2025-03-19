@@ -276,6 +276,16 @@ Start Header CSS
   position: relative;
 }
 
+.table-responsive {
+  overflow-x: auto; /* Cho phép cuộn ngang */
+  max-width: 100%;
+}
+
+.table-responsive .ant-table {
+  min-width: 600px; /* Đảm bảo bảng có thể cuộn */
+}
+
+
 .mobile-nav {
   display: flex;
   align-items: center;
@@ -503,8 +513,8 @@ Start Header CSS
 }
 
 .round-image {
-  width: 75px;
-  height: 75px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   /* Cắt tròn */
   object-fit: cover;
@@ -2564,6 +2574,9 @@ Start Blog CSS
   -moz-transition: all 0.4s ease;
   transition: all 0.4s ease;
   box-shadow: 0px 0px 10px #00000014;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .blog .single-news img {
@@ -2589,6 +2602,10 @@ Start Blog CSS
   left: 0;
   z-index: 0;
   margin-bottom: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .blog .single-news .news-content:before {
@@ -2610,6 +2627,13 @@ Start Blog CSS
   opacity: 1;
   visibility: visible;
   width: 100%;
+}
+
+.blog .single-news .news-body {
+  flex: 1;
+  /* Đẩy nội dung xuống để các phần tử đều nhau */
+  display: flex;
+  flex-direction: column;
 }
 
 .blog .single-news .news-body h2 {
@@ -2634,10 +2658,17 @@ Start Blog CSS
   font-size: 13px;
   letter-spacing: 0px;
   line-height: 23px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* Giới hạn 3 dòng */
+  -webkit-box-orient: vertical;
 }
 
 .blog .single-news .news-body .date {
   display: inline-block;
+  width: fit-content;
   font-size: 14px;
   margin-bottom: 5px;
   background: #02a25c;
@@ -2805,6 +2836,7 @@ Start Blog CSS
 
 .main-sidebar .single-post .content {
   padding-left: 100px;
+  margin: 0;
 }
 
 .main-sidebar .single-post .content h5 {
@@ -5277,7 +5309,8 @@ End Footer CSS
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.service-table th, .service-table td {
+.service-table th,
+.service-table td {
   padding: 12px;
   border: 1px solid #ddd;
   text-align: left;
@@ -5319,14 +5352,15 @@ End Footer CSS
   color: #ccc;
 }
 
-.search__input:focus + .search__button {
+.search__input:focus+.search__button {
   background-color: #f0eeee;
 }
 
 .video-container {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 aspect ratio */
+  padding-top: 56.25%;
+  /* 16:9 aspect ratio */
   overflow: hidden;
   border-radius: 10px;
 }
@@ -5343,7 +5377,13 @@ End Footer CSS
 
 @media (max-width: 450px) {
   .video-container {
-      padding-top: 75%; /* Tăng chiều cao video cho màn hình nhỏ */
-      border-radius: 5px;
+    padding-top: 75%;
+    /* Tăng chiều cao video cho màn hình nhỏ */
+    border-radius: 5px;
   }
+}
+
+.swiper-pagination-bullet-active {
+  background: #02a25c !important; /* Màu khi active */
+  opacity: 1;
 }

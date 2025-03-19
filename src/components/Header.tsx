@@ -82,6 +82,9 @@ const Header = () => {
                                             <li><Link to="/specialties" onClick={() => setIsOpen(false)}>Chuyên Khoa</Link></li>
                                             <li><Link to="/services" onClick={() => setIsOpen(false)}>Dịch Vụ</Link></li>
                                             <li><Link to="/news" onClick={() => setIsOpen(false)}>Tin Tức</Link></li>
+                                            {localStorage.getItem("tokenpkdkdh") && (
+                                                <li><Link to="/admin/newsmanagement" onClick={() => setIsOpen(false)}>Đăng Bài</Link></li>
+                                            )}
                                             <li><Link to="/video" onClick={() => setIsOpen(false)}>Video</Link></li>
                                             <li><Link to="/contact" onClick={() => setIsOpen(false)}>Liên Hệ</Link></li>
                                         </ul>
@@ -95,27 +98,37 @@ const Header = () => {
                                                 <li className={location.pathname === "/" ? "active" : ""}>
                                                     <Link to="/">Trang Chủ</Link>
                                                 </li>
-                                                <li className={location.pathname.startsWith("/specialties") ? "active" : ""}>
+                                                <li className={location.pathname.startsWith("/specialties") || location.pathname.startsWith("/doctors") || location.pathname.startsWith("/admin/doctormanagement") ? "active" : ""}>
                                                     <Link to="/specialties">
                                                         Chuyên Khoa <i className="icofont-rounded-down"></i>
                                                     </Link>
                                                     <ul className="dropdown">
-                                                        <li className={location.pathname === "/doctors" ? "active" : ""}>
+                                                        <li>
                                                             <Link to="/doctors">Bác Sĩ</Link>
                                                         </li>
+                                                        {localStorage.getItem("tokenpkdkdh") && (
+                                                            <li>
+                                                                <Link to="/admin/doctormanagement">Thêm Bác Sĩ</Link>
+                                                            </li>
+                                                        )}
                                                     </ul>
                                                 </li>
                                                 <li className={location.pathname === "/services" ? "active" : ""}>
                                                     <Link to="/services">Dịch Vụ</Link>
                                                 </li>
-                                                <li className={location.pathname.startsWith("/news") ? "active" : ""}>
+                                                <li className={location.pathname.startsWith("/news") || location.pathname.startsWith("/admin/newsmanagement") || location.pathname.startsWith("/video") ? "active" : ""}>
                                                     <Link to="/news">
                                                         Tin Tức <i className="icofont-rounded-down"></i>
                                                     </Link>
                                                     <ul className="dropdown">
-                                                        <li className={location.pathname === "/video" ? "active" : ""}>
+                                                        <li>
                                                             <Link to="/video">Video</Link>
                                                         </li>
+                                                        {localStorage.getItem("tokenpkdkdh") && (
+                                                            <li>
+                                                                <Link to="/admin/newsmanagement">Đăng bài</Link>
+                                                            </li>
+                                                        )}
                                                     </ul>
                                                 </li>
                                                 <li className={location.pathname === "/contact" ? "active" : ""}>

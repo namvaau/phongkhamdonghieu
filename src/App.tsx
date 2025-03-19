@@ -9,8 +9,6 @@ import ServicesDetails from './layouts/customer/ServicesDetails';
 import Services from './layouts/customer/Services';
 import Doctors from './layouts/customer/Doctors';
 import Booking from './layouts/customer/Booking';
-import Preloader from './components/Preloader';
-import { useEffect, useState } from 'react';
 import AboutUs from './layouts/customer/AboutUs';
 import Urgent from './layouts/customer/Urgent';
 import Specialty from './layouts/customer/Specialty';
@@ -20,6 +18,9 @@ import News from './layouts/customer/News';
 import ScrollToTop from './components/ScrollToTop';
 import Video from './layouts/customer/Video';
 import NewsForm from './layouts/admin/NewsForm';
+import Login from './layouts/admin/Login';
+import ProtectedRoute from './layouts/admin/ProtectedRoute';
+import DoctorManagement from './layouts/admin/DoctorsForm';
 
 const CustomerLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
@@ -32,20 +33,6 @@ const CustomerLayout: React.FC<{ children: React.ReactNode }> = ({ children }) =
 };
 
 const App: React.FC = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Giả lập tải dữ liệu trong 2 giây
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 800);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
-    return <Preloader />;
-  }
   return (
     <Router>
       <ScrollToTop />
@@ -66,9 +53,29 @@ const App: React.FC = () => {
         <Route path="/video" element={<CustomerLayout><Video /></CustomerLayout>} />
 
 
-        <Route path="/admin/createnews" element={<CustomerLayout><NewsForm /></CustomerLayout>} />
+        <Route
+          path="/admin/newsmanagement"
+          element={
+            <ProtectedRoute>
+              <CustomerLayout>
+                <NewsForm />
+              </CustomerLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/doctormanagement"
+          element={
+            <ProtectedRoute>
+              <CustomerLayout>
+                <DoctorManagement />
+              </CustomerLayout>
+            </ProtectedRoute>
+          }
+        />
 
 
+        <Route path="/login" element={<CustomerLayout><Login /></CustomerLayout>} />
         <Route path="*" element={<CustomerLayout><NotFound404 /></CustomerLayout>} />
       </Routes>
     </Router>

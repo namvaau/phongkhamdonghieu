@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import { BASE_URL, News } from "../../interface/InterfaceData";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 interface NewsFormData {
@@ -119,117 +119,181 @@ const NewsForm = () => {
 
     return (
         <>
-            <Breadcrumbs title='Đăng Tin' />
-            <section className="appointment" style={{ paddingBottom: '50px' }}>
+            <Breadcrumbs title='Đăng Bài' />
+            <section className="news-single section">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-12 col-md-12 col-12">
-                            <form onSubmit={handleSubmit(onSubmit)} className="p-4 border rounded-lg">
-                                <div className="row">
-                                    <div className="col-lg-12 col-md-12 col-12">
-                                        <div className="form-group">
-                                            <input {...register("title", { required: true })} placeholder="Tiêu đề" className="border p-2 w-full" />
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-12 col-md-12 col-12">
-                                        <div className="form-group">
-                                            <textarea {...register("summary", { required: true })} placeholder="Tóm tắt nội dung" className="border p-2 w-full" />
-                                        </div>
-                                    </div>
-                                    {/* <div className="col-lg-6 col-md-6 col-12">
-                                        <div className="form-group">
-                                            <input type="date" {...register("date", { required: true })} className="border p-2 w-full" />
-                                        </div>
-                                    </div> */}
-                                    <div className="col-lg-6 col-md-6 col-12">
-                                        <div className="form-group">
-                                            <label>Ảnh chính:</label>
-                                            <br />
-                                            <input type="file" {...register("image")} className="border p-2 w-full" />
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-12 col-md-12 col-12">
-                                        <div className="form-group">
-                                            <textarea {...register("content")} placeholder="Nội dung 1" className="border p-2 w-full" />
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-6 col-md-6 col-12">
-                                        <div className="form-group">
-                                            <label>Ảnh nội dung 1:</label>
-                                            <br />
-                                            <input type="file" {...register("image1")} className="border p-2 w-full" />
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-12 col-md-12 col-12">
-                                        <div className="form-group">
-                                            <textarea {...register("content1")} placeholder="Nội dung 2" className="border p-2 w-full" />
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-6 col-md-6 col-12">
-                                        <div className="form-group">
-                                            <label>Ảnh nội dung 2:</label>
-                                            <br />
-                                            <input type="file" {...register("image2")} className="border p-2 w-full" />
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-12 col-md-12 col-12">
-                                        <div className="form-group">
-                                            <textarea {...register("content2")} placeholder="Nội dung 3" className="border p-2 w-full" />
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-6 col-md-6 col-12">
-                                        <div className="form-group">
-                                            <label>Ảnh nội dung 3:</label>
-                                            <br />
-                                            <input type="file" {...register("image3")} className="border p-2 w-full" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="row">
-                                    <div className="col-lg-5 col-md-4 col-12">
-                                        <div className="form-group">
-                                            <div className="button">
+                        <div className="col-lg-8 col-12">
+                            <div className="row">
+                                <div className="col-12">
+                                    <form className="single-main" onSubmit={handleSubmit(onSubmit)}>
+                                        <div className="news-text">
+                                            <div className="col-lg-6 col-md-6 col-12">
+                                                <label>Ảnh chính:</label>
+                                                <br />
+                                                <input type="file" {...register("image")} className="border p-2 w-full" />
+                                            </div>
+                                            <div className="col-lg-12 col-md-12 col-12">
+                                                <div className="form-group">
+                                                    <input {...register("title", { required: true })} placeholder="Tiêu đề" className="border p-2 w-full" />
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-12 col-md-12 col-12">
+                                                <div className="form-group">
+                                                    <textarea {...register("summary", { required: true })} placeholder="Tóm tắt nội dung" className="border p-2 w-full" />
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-12 col-md-12 col-12">
+                                                <div className="form-group">
+                                                    <textarea {...register("content")} placeholder="Nội dung 1" className="border p-2 w-full" />
+                                                </div>
+                                            </div>
+                                            {/* <p dangerouslySetInnerHTML={{ __html: newsDetails?.content1 ?? "" }}></p> */}
+                                            <div className="image-gallery">
+                                                <div className="row">
+                                                    <div className="col-lg-6 col-md-6 col-12">
+                                                        <div className="single-image">
+                                                            <div className="col-lg-6 col-md-6 col-12">
+                                                                <label>Ảnh nội dung 1:</label>
+                                                                <br />
+                                                                <input type="file" {...register("image1")} className="border p-2 w-full" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="col-lg-6 col-md-6 col-12">
+                                                        <div className="single-image">
+                                                            <div className="col-lg-6 col-md-6 col-12">
+                                                                <label>Ảnh nội dung 2:</label>
+                                                                <br />
+                                                                <input type="file" {...register("image2")} className="border p-2 w-full" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div className="col-lg-12 col-md-12 col-12">
+                                                <div className="form-group">
+                                                    <textarea {...register("content1")} placeholder="Nội dung 2" className="border p-2 w-full" />
+                                                </div>
+                                            </div>
+
+                                            <div className="col-lg-12 col-md-12 col-12">
+                                                <div className="form-group">
+                                                    <textarea {...register("content2")} placeholder="Nội dung 3" className="border p-2 w-full" />
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-6 col-md-6 col-12">
+                                                <label>Ảnh nội dung 3:</label>
+                                                <br />
+                                                <input type="file" {...register("image3")} className="border p-2 w-full" />
+                                            </div>
+                                            <div style={{ margin: '20px 0' }}>
                                                 <button type="submit" className="btn">
                                                     {loading ? "Đang đăng..." : "Đăng tin"}
                                                 </button>
+                                                {message && <p className="mt-2 text-red-500">{message}</p>}
                                             </div>
+                                            {/* <p dangerouslySetInnerHTML={{ __html: newsDetails?.content2 ?? "" }}></p> */}
+                                            <blockquote className="overlay">
+                                                <p>
+                                                    "Phòng Khám Đông Hiếu - Y Đức Tạo Niềm Tin!"
+                                                </p>
+                                            </blockquote>
+                                            <p>
+                                                Hãy đến với Đông Hiếu để trải nghiệm dịch vụ y tế chuyên nghiệp và tận tâm. Đội ngũ của chúng tôi luôn sẵn sàng phục vụ bạn!
+                                            </p>
                                         </div>
-                                    </div>
-                                    <div className="col-lg-7 col-md-8 col-12">
-                                        {message && <p className="mt-2 text-red-500">{message}</p>}
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
 
-                </div>
-            </section>
-            <section className="blog section" id="blog">
-                <div className="container">
-                    <div className="row">
-                        {sortedNews.map((item) => (
-                            <div
-                                key={item.id}
-                                className="col-lg-4 col-md-6 col-12"
-                                onClick={() => navigate(`/news/details/${item.id}`, { state: { news: news } })}
-                            >
-                                <div className="single-news">
-                                    <div className="news-head">
-                                        <img src={item.imageUrl} alt={item.title} className="news-image" />
-                                    </div>
-                                    <div className="news-body">
-                                        <div className="news-content">
-                                            <div className="date">{formatDate(item.date)}</div>
-                                            <h2>
-                                                <a href={`/news/details/${item.id}`}>{item.title}</a>
-                                            </h2>
-                                            <p className="text">{item.summary}</p>
-                                        </div>
-                                    </div>
+                                    </form>
+
                                 </div>
                             </div>
-                        ))}
+                        </div>
+                        <div className="col-lg-4 col-12">
+                            <div className="main-sidebar">
+                                {/* Single Widget */}
+                                <div className="single-widget search">
+                                    <div className="form">
+                                        <input type="email" placeholder="Search Here..." />
+                                        <a className="button" href="#">
+                                            <i className="fa fa-search" />
+                                        </a>
+                                    </div>
+                                </div>
+                                {/*/ End Single Widget */}
+                                {/* Single Widget */}
+                                <div className="single-widget category">
+                                    <h3 className="title">Danh Mục</h3>
+                                    <ul className="categor-list">
+                                        <li>
+                                            <Link to={'/video'}>Video</Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                                {/*/ End Single Widget */}
+                                {/* Single Widget */}
+                                <div className="single-widget recent-post">
+                                    <h3 className="title">Tin tức khác</h3>
+                                    {sortedNews
+                                        .filter((news) => news.id)
+                                        .slice(0, 3).map((item) => (
+                                            <div style={{ cursor: 'pointer' }} className="single-post" key={item.id} onClick={() => navigate(`/news/details/${item.id}`, { state: { news: news } })}>
+                                                <div className="image">
+                                                    <img src={item.imageUrl} alt="#" />
+                                                </div>
+                                                <div className="content">
+                                                    <h5>
+                                                        <a onClick={() => navigate(`/news/details/${item.id}`, { state: { news: news } })}>{item.title}</a>
+                                                    </h5>
+                                                    <ul className="comment">
+                                                        <li>
+                                                            <i className="fa fa-calendar" aria-hidden="true" />
+                                                            {formatDate(item.date)}
+                                                        </li>
+                                                        <li>
+                                                            <i className="fa fa-commenting-o" aria-hidden="true" />
+                                                            35
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    {/* End Single Post */}
+                                </div>
+                                {/*/ End Single Widget */}
+                                {/* Single Widget */}
+                                {/*/ End Single Widget */}
+                                {/* Single Widget */}
+                                <div className="single-widget side-tags">
+                                    <h3 className="title">Tags</h3>
+                                    <ul className="tag">
+                                        <li>
+                                            <a href="#">business</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">wordpress</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">html</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">multipurpose</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">education</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">template</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Ecommerce</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                {/*/ End Single Widget */}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

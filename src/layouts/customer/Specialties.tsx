@@ -3,20 +3,28 @@ import section from '../../assets/img/section-img.png'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { BASE_URL, Specialty } from '../../interface/InterfaceData';
+import Preloader from '../../components/Preloader';
 const Specialties = () => {
     const [specialties, setSpecialties] = useState<Specialty[]>([]);
-    const [error, setError] = useState(null);
-
+    const [error, setError] = useState("");
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
-        axios
-            .get(`${BASE_URL}/specialties`)
-            .then((response) => {
+        const fetchSpecialties = async () => {
+            try {
+                const response = await axios.get(`${BASE_URL}/specialties`);
                 setSpecialties(response.data);
-            })
-            .catch((err) => {
-                setError(err.message);
-            });
+            } catch (err) {
+                setError(err instanceof Error ? err.message : "Lỗi không xác định");
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchSpecialties();
     }, []);
+
+    if (loading) return <Preloader />;
+
     if (error) return <>
         <section className="error-page section">
             <div className="container">

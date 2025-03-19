@@ -6,7 +6,6 @@ import WhyChoose from '../../components/WhyChoose'
 import Call from '../../components/Call'
 import Portfolio from '../../components/Portfolio'
 import Services from '../../components/Services'
-import Blogs from '../../components/Blogs'
 import Appointment from '../../components/Appointment'
 import section from '../../assets/img/section-img.png'
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -19,6 +18,7 @@ import client5 from '../../assets/img/client5.png'
 
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import HotNews from '../../components/HotNews'
 
 const IndexCustomer = () => {
     const [isActive, setIsActive] = useState(false);
@@ -69,10 +69,12 @@ const IndexCustomer = () => {
 
             <Slider />
             <Schedule />
+            <HotNews/>
             <Feautes />
             <Services />
             <Call />
             <WhyChoose />
+            <Facts />
             <Portfolio />
             <section className="why-choose section" style={{ paddingTop: '0' }}>
                 <div className="container">
@@ -143,8 +145,6 @@ const IndexCustomer = () => {
                     </div>
                 </div>
             </section>
-            <Facts />
-            <Blogs />
             <div className="clients overlay">
                 <div className="container">
                     <div className="row">

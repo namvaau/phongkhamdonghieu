@@ -57,7 +57,7 @@ const NewsDetail = () => {
                                         </div>
                                         {/* News Title */}
                                         <h1 className="news-title">
-                                            <a href="news-single.html">
+                                            <a>
                                                 {newsDetails?.title}
                                             </a>
                                         </h1>
@@ -96,12 +96,12 @@ const NewsDetail = () => {
                                                 <div className="row">
                                                     <div className="col-lg-6 col-md-6 col-12">
                                                         <div className="single-image">
-                                                            <img src={newsDetails?.image1} alt="Dịch vụ y tế tại Đông Hiếu" />
+                                                            <img src={newsDetails?.image2} alt="Dịch vụ y tế tại Đông Hiếu" />
                                                         </div>
                                                     </div>
                                                     <div className="col-lg-6 col-md-6 col-12">
                                                         <div className="single-image">
-                                                            <img src={newsDetails?.image2} alt="Trang thiết bị hiện đại" />
+                                                            <img src={newsDetails?.image3} alt="Trang thiết bị hiện đại" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -171,13 +171,13 @@ const NewsDetail = () => {
                                     {sortedNews
                                         .filter((news) => news.id !== Number(id))
                                         .slice(0, 3).map((item) => (
-                                            <div className="single-post" key={item.id} onClick={() => navigate(`/news/details/${item.id}`, { state: { news: news } })}>
+                                            <div style={{ cursor: 'pointer' }} className="single-post" key={item.id} onClick={() => navigate(`/news/details/${item.id}`, { state: { news: news } })}>
                                                 <div className="image">
                                                     <img src={item.imageUrl} alt="#" />
                                                 </div>
                                                 <div className="content">
                                                     <h5>
-                                                        <a href="#">{item.title}</a>
+                                                        <a onClick={() => navigate(`/news/details/${item.id}`, { state: { news: news } })}>{item.title}</a>
                                                     </h5>
                                                     <ul className="comment">
                                                         <li>

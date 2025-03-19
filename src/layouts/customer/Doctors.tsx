@@ -2,6 +2,7 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { BASE_URL, Doctor } from "../../interface/InterfaceData";
+import Preloader from "../../components/Preloader";
 
 
 // const doctors = [
@@ -58,23 +59,57 @@ import { BASE_URL, Doctor } from "../../interface/InterfaceData";
 
 const Doctors = () => {
   const [doctors, setDoctors] = useState<Doctor[]>([]);
-  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
   useEffect(() => {
-    axios
-      .get(`${BASE_URL}/doctors`)
-      .then((response) => {
+    const fetchDoctors = async () => {
+      try {
+        const response = await axios.get(`${BASE_URL}/doctors`);
         setDoctors(response.data);
-      })
-      .catch((err) => {
-        setError(err.message);
-      });
+      } catch (err) {
+        console.error("Lỗi khi tải tin tức:", err);
+        setError(err instanceof Error ? err.message : "Lỗi không xác định");
+      } finally {
+        setLoading(false); // Ẩn Preloader dù thành công hay lỗi
+      }
+    };
+
+    fetchDoctors();
   }, []);
+
+  if (loading) return <Preloader />;
+  if (error) return <>
+    <section className="error-page section">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-6 offset-lg-3 col-12">
+            {/* Error Inner */}
+            <div className="error-inner">
+              <h1>
+                404<span>Không tìm thấy dữ liệu!</span>
+              </h1>
+              <p>
+                Đã xảy ra lỗi trong quá trình tải trang. Vui lòng thử lại !
+              </p>
+              <form className="search-form">
+                <input placeholder="Search from Here" type="text" />
+                <button className="btn" type="submit">
+                  <i className="fa fa-search" />
+                </button>
+              </form>
+            </div>
+            {/*/ End Error Inner */}
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </>;
   return (
     <>
       <Breadcrumbs title="Bác Sĩ của chúng tôi" />
       <section className="doctors">
         <div className="container">
-          {error}
           <div className="doctors-grid">
             {doctors.map((doctor) => (
               <div className="doctor-card" key={doctor.id}>

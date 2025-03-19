@@ -111,7 +111,7 @@ const Video = () => {
                                         .filter((item) => item.url !== currentVideo.url) // Bỏ qua video hiện tại
                                         .slice(0, 5) // Giới hạn hiển thị 3 video
                                         .map((item) => (
-                                            <div className="single-post" key={item.url}>
+                                            <div className="single-post" key={item.url} style={{cursor: "pointer"}}>
                                                 <div className="image">
                                                     <img src={getYoutubeThumbnail(item.url)} alt="Thumbnail" />
                                                 </div>

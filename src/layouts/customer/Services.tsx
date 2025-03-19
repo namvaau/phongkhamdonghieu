@@ -3,15 +3,60 @@ import section from '../../assets/img/section-img.png'
 import { useEffect, useState } from 'react';
 import { BASE_URL, Service } from '../../interface/InterfaceData';
 import { useNavigate } from 'react-router-dom';
+import Preloader from '../../components/Preloader';
 const Services = () => {
+    const [loading, setLoading] = useState(true);
     const [services, setServices] = useState<Service[]>([]);
+    const [error, setError] = useState("");
     const navigate = useNavigate();
     useEffect(() => {
-        fetch(`${BASE_URL}/services`) // API backend
-            .then((res) => res.json())
-            .then((data) => setServices(data))
-            .catch((error) => console.error("Error fetching services:", error));
+        const fetchServices = async () => {
+            try {
+                const response = await fetch(`${BASE_URL}/services`);
+                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+
+                const data = await response.json();
+                setServices(data);
+            } catch (err) {
+                console.error("Error fetching services:", err);
+                setError(err instanceof Error ? err.message : "Lỗi không xác định");
+            } finally {
+                setLoading(false); // Ẩn Preloader dù thành công hay thất bại
+            }
+        };
+
+        fetchServices();
     }, []);
+
+    if (loading) return <Preloader />;
+
+    if (error) return <>
+        <section className="error-page section">
+            <div className="container">
+                <div className="row">
+                    <div className="col-lg-6 offset-lg-3 col-12">
+                        {/* Error Inner */}
+                        <div className="error-inner">
+                            <h1>
+                                404<span>Không tìm thấy dữ liệu!</span>
+                            </h1>
+                            <p>
+                                Đã xảy ra lỗi trong quá trình tải trang. Vui lòng thử lại !
+                            </p>
+                            <form className="search-form">
+                                <input placeholder="Search from Here" type="text" />
+                                <button className="btn" type="submit">
+                                    <i className="fa fa-search" />
+                                </button>
+                            </form>
+                        </div>
+                        {/*/ End Error Inner */}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </>;
     return (
         <>
             <Breadcrumbs title='Dịch Vụ Của Chúng Tôi' />
