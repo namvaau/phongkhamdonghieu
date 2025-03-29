@@ -4,10 +4,12 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { BASE_URL, Specialty } from '../../interface/InterfaceData';
 import Preloader from '../../components/Preloader';
+import { useNavigate } from 'react-router-dom';
 const Specialties = () => {
     const [specialties, setSpecialties] = useState<Specialty[]>([]);
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
     useEffect(() => {
         const fetchSpecialties = async () => {
             try {
@@ -70,11 +72,12 @@ const Specialties = () => {
                     </div>
                     <div className="row">
                         {specialties.map((specialty) => (
-                            <div key={specialty.id} className="col-lg-4 col-md-6 col-12">
+                            <div key={specialty.id} className="col-lg-4 col-md-6 col-12" onClick={()=> navigate('/specialties/details/1')}>
+                                <img src={specialty.imageUrl} alt="" />
                                 <div className="single-service">
                                     <i className={`icofont ${specialty.icon}`} />
                                     <h4>
-                                        <a href="#">{specialty.name}</a>
+                                        <a href="">{specialty.name}</a>
                                     </h4>
                                     <p>{specialty.description}</p>
                                 </div>

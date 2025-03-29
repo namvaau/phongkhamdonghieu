@@ -1,30 +1,88 @@
-import Breadcrumbs from '../../components/Breadcrumbs'
-import WelcomeSection from '../../components/WelcomeSection'
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import Breadcrumbs from '../../components/Breadcrumbs';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 import client1 from '../../assets/img/client1.png'
-import client2 from '../../assets/img/client2.png'
-import client3 from '../../assets/img/client3.png'
-import client4 from '../../assets/img/client4.png'
-import client5 from '../../assets/img/client5.png'
-
+import ReactPlayer from "react-player";
+import Modal from "react-modal";
+import { useState } from 'react';
+import Facts from '../../components/Facts';
+import im1 from '../../assets/img/blog1.jpg'
+import im2 from '../../assets/img/pf5.jpg'
 const AboutUs = () => {
     const clients = [
         client1,
-        client2,
-        client3,
-        client4,
-        client5,
-        client1,
-        client2,
-        client3,
-        client4,
-        client5,
     ];
+    const [isOpen, setIsOpen] = useState(false);
     return (
         <>
             <Breadcrumbs title='Về Chúng Tôi' />
-            <WelcomeSection />
+            <section className="why-choose section">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-6 col-12">
+                            {/* Start Choose Left */}
+                            <div className="choose-left">
+                                <h3>VỀ CHÚNG TÔI
+                                </h3>
+                                <p>
+                                    Công ty Cổ phần Khám chữa bệnh Đông Hiếu được thành lập và đăng ký kinh doanh ngày 20/06/2019 với lĩnh vực hoạt động là Khám chữa bệnh và được Sở y tế Nghệ An cấp giấy phép hoạt động Khám chữa bệnh số 1092/NA-GPHĐ với tên gọi là Phòng khám Đa khoa Đông Hiếu. Toạ lạc trên trục đường giao thông QL48 tại Xóm Đông Mỹ, Xã Đông Hiếu, TX Thái Hoà với nhiệm vụ cốt lõi là chăm sóc sức khỏe nhân dân trên địa bàn Thị xã Thái Hòa và các vùng miền lân cận. Năm 2021, Phòng khám đã được Cơ quan Bảo hiểm xã hội tỉnh Nghệ An thẩm định và cho phép triển khai khám chữa bệnh, cấp phát thuốc BHYT cho nhân dân.
+                                </p>
+                            </div>
+
+                            {/* End Choose Left */}
+                        </div>
+                        <div className="col-lg-6 col-12">
+                            {/* Start Choose Rights */}
+                            <div className="choose-right">
+                                <div className="video-image">
+                                    <div className="promo-video">
+                                        <div className="waves-block">
+                                            <div className="waves wave-1" />
+                                            <div className="waves wave-2" />
+                                            <div className="waves wave-3" />
+                                        </div>
+                                    </div>
+                                    <button className="video video-popup" onClick={() => setIsOpen(true)}>
+                                        <i className="fa fa-play" />
+                                    </button>
+                                </div>
+
+                                {/* Popup Video */}
+                                <Modal isOpen={isOpen} onRequestClose={() => setIsOpen(false)} className="modal-video">
+                                    <div className="video-wrapper">
+                                        <button className="close-btn" onClick={() => setIsOpen(false)}>×</button>
+                                        <ReactPlayer url="https://www.youtube.com/watch?v=sCv-MMADrY0" playing controls width="100%" />
+                                    </div>
+                                </Modal>
+
+                            </div>
+                            {/* End Choose Rights */}
+                        </div>
+
+                    </div>
+                    <div className="choose-left" style={{ marginTop: '20px' }}>
+                        <p>
+                            Hiện nay, phòng khám đa khoa Đông Hiếu có 46 cán bộ y bác sỹ. Với phương châm “xem người bệnh như người thân, người nhà của chính mình”nên  những năm qua đội ngũ y bác sỹ của phòng khám luôn không ngừng nỗ lực, trau dồi đạo đức, chuyên môn nghiệp vụ. Bên cạnh đó, phòng khám cũng đã mạnh dạn khai thác triệt để ứng dụng công nghệ thông tin vào công tác khám chữa bệnh . Hiện, phòng khám có máy chụp cắt lớp vi tính 32 dãy đời mới, hệ thống nội soi tiêu hóa – dạ dày – đại tràng; Hệ thống xét nghiệm tự động; Xe cứu thương và các trang thiết bị hiện đại đáp ứng nhu cầu khám chữa bệnh và vận chuyển bệnh nhân cấp cứu. Phòng khám đa khoa Đông Hiếu là một trong những phòng khám ứng dụng tốt hệ thống công nghệ thông tin trong chuyển đổi số, đầu tư hệ thống số tự động, liên kết với tuyến trên, luôn cải cách thủ tục hành chính, giảm tối đa thời gian chờ đợi của nhân dân.  Ngoài ra, Phòng khám  tích cực phát triển thêm nhiều kỹ thuật chuyên khoa. Do vậy, mặc dù trong thời gian qua, có nhiều biến động do dịch bệnh Covid - 19 gây ra nhưng tập thể Phòng khám đa khoa Đông Hiếu vẫn luôn hoàn thành tốt các nhiệm vụ được giao, giữ vững ổn định chính trị nội bộ, đời sống của cán bộ nhân viên được đảm bảo, công tác khám chữa bệnh cho nhân dân dần được cải thiện, chất lượng dịch vụ ngày càng nâng lên, góp phần vào sự phát triển kinh tế xã hội của địa phương và đạt được nhiều thành quả đáng khích lệ. Điều đó được thể hiện rõ nét như: Số lượt khám bệnh, chữa bệnh ngoại trú năm 2024 là trên 40 nghìn lượt người, luỹ kế năm 2020 là trên 148 nghìn lượt người.
+                        </p>
+                    </div>
+                    <div className="row">
+                        <div className="col-lg-6 col-12">
+                            <img src={im1} alt="" />
+                        </div>
+                        <div className="col-lg-6 col-12">
+                            <img src={im2} alt="" />
+                        </div>
+                    </div>
+                    <div className="choose-left" style={{ marginTop: '20px' }}>
+                        <p>
+                            Đội ngũ lãnh đạo của Công ty CP khám chữa bệnh Đông Hiếu là sự kết hợp giữa bề dày kinh nghiệm lâu năm và sự nhiệt huyết với sứ mệnh là khám chữa bệnh cứu người. Tổ chức bộ máy gồm : Ban lãnh đạo, các bộ phận Cận Lâm sàng, Lâm sàng và bộ phận Hành chính phối hợp làm việc hiệu quả. Điều đặc biệt của phòng khám đa khoa Đông Hiếu là phòng khám có chi bộ, có tổ chức công đoàn, đoàn thanh niên. Đây là chi bộ ngoài nhà nước đầu tiên tại Thái Hoà trực thuộc Đảng uỷ xã. Từ khi thành lập đến nay chi bộ, các tổ chức đoàn thể của phòng khám đã có rất nhiều hoạt động thiện nguyện và phong trào luyện tập thể dục thể thao cũng được duy trì, phát triển rầm rộ. Điều đó đã góp phần tạo sự đồng thuận, mối đoàn kết, xây dựng cộng sự và cùng nhau nỗ lực trong công tác khám chữa bệnh. Trong hai năm liền 2023 và năm 2024, Chi bộ được xếp loại hoàn thành tốt nhiệm vụ; Đ/c Bí thư chi bộ được Đảng bộ xếp loại hoàn thành xuất sắc nhiệm vụ; tập thể công đoàn và các cá nhân có thành tích xuất sắc đã được Liên đoàn Lao động Thị xã Thái Hòa tặng giấy khen; chi đoàn TNCSHCM phòng khám được thị đoàn Thái Hoà tặng giấy khen vì có nhiều hoạt động an sinh xã hội ý nghĩa.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <Facts />
             <section className="why-choose section">
                 <div className="container">
                     <div className="row">
@@ -113,6 +171,7 @@ const AboutUs = () => {
             </div>
 
         </>
+
     )
 }
 

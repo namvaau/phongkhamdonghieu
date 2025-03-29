@@ -11,8 +11,8 @@ const Facts = () => {
                             <div className="single-fun">
                                 <i className="icofont icofont-home" />
                                 <div className="content">
-                                    <span className="counter">3468</span>
-                                    <p>Hospital Rooms</p>
+                                    <span className="counter">##</span>
+                                    <p>Phòng Khám</p>
                                 </div>
                             </div>
                             {/* End Single Fun */}
@@ -22,8 +22,8 @@ const Facts = () => {
                             <div className="single-fun">
                                 <i className="icofont icofont-user-alt-3" />
                                 <div className="content">
-                                    <span className="counter">557</span>
-                                    <p>Specialist Doctors</p>
+                                    <span className="counter">9</span>
+                                    <p>Bác sĩ</p>
                                 </div>
                             </div>
                             {/* End Single Fun */}
@@ -33,8 +33,8 @@ const Facts = () => {
                             <div className="single-fun">
                                 <i className="icofont-simple-smile" />
                                 <div className="content">
-                                    <span className="counter">4379</span>
-                                    <p>Happy Patients</p>
+                                    <span className="counter">100%</span>
+                                    <p>Bệnh nhân hạnh phúc</p>
                                 </div>
                             </div>
                             {/* End Single Fun */}
@@ -44,8 +44,8 @@ const Facts = () => {
                             <div className="single-fun">
                                 <i className="icofont icofont-table" />
                                 <div className="content">
-                                    <span className="counter">32</span>
-                                    <p>Years of Experience</p>
+                                    <span className="counter">6</span>
+                                    <p>Năm hoạt động</p>
                                 </div>
                             </div>
                             {/* End Single Fun */}

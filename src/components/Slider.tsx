@@ -36,18 +36,7 @@ const Slider = () => {
                             <div className="container">
                                 <div className="row">
                                     <div className="col-lg-7">
-                                        <div className="text">
-                                            {/* <h1>{slide.title}</h1>
-                                            <p className="short-text">
-                                                Nhân dịp Ngày Thầy thuốc Việt Nam, chúng tôi xin gửi lời tri ân sâu sắc đến những người đã và đang cống hiến cho ngành y.
-                                                Chúc các y, bác sĩ luôn mạnh khỏe, hạnh phúc và tiếp tục mang đến những điều tốt đẹp cho cộng đồng.
-                                            </p>
-                                            <div className="button">
-                                                <a href="#" className="btn">
-                                                    {slide.btnText}
-                                                </a>
-                                            </div> */}
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>

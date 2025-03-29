@@ -7,6 +7,21 @@ export interface Specialty {
     name: string;
     description: string;
     icon: string;
+    imageUrl: string;
+    imageUrl1: string;
+}
+
+export interface SpecialtyDetail {
+    id: number;
+    introduction: string;
+    function: string;
+    mission: string;
+    personnel: string;
+    equipment: string;
+    expertise: string;
+    image1: string;
+    image2: string;
+    image3: string;
 }
 
 export interface Doctor {

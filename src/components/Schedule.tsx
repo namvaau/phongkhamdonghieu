@@ -51,7 +51,7 @@ const Schedule = () => {
                                             <span>Phòng Khám Đa Khoa Đông Hiếu</span>
                                             <h4>Chuyên Khoa</h4>
                                             <p>
-                                                Phòng Khám Đa Khoa Đông Hiếu cung cấp đa dạng dịch vụ y tế với các chuyên khoa, kết hợp chuyên môn cao với công nghệ hiện đại.
+                                            Sở hữu không gian khám chữa bệnh văn minh, sang trọng, hiện đại, hỗ trợ hiệu quả cho việc chẩn đoán và điều trị.
                                             </p>
                                             <Link to="/specialties">XEM CHI TIẾT</Link>
                                             <i className="fa fa-long-arrow-right" style={{ color: '#fff', marginLeft: '5px' }} />

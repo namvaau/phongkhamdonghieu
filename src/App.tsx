@@ -10,8 +10,6 @@ import Services from './layouts/customer/Services';
 import Doctors from './layouts/customer/Doctors';
 import Booking from './layouts/customer/Booking';
 import AboutUs from './layouts/customer/AboutUs';
-import Urgent from './layouts/customer/Urgent';
-import Specialty from './layouts/customer/Specialty';
 import Specialties from './layouts/customer/Specialties';
 import NewsDetail from './layouts/customer/NewsDetail';
 import News from './layouts/customer/News';
@@ -21,6 +19,7 @@ import NewsForm from './layouts/admin/NewsForm';
 import Login from './layouts/admin/Login';
 import ProtectedRoute from './layouts/admin/ProtectedRoute';
 import DoctorManagement from './layouts/admin/DoctorsForm';
+import SpecialtiesDetails from './layouts/customer/SpecialtiesDetails';
 
 const CustomerLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
@@ -45,8 +44,7 @@ const App: React.FC = () => {
         <Route path="/services" element={<CustomerLayout><Services /></CustomerLayout>} />
         <Route path="/specialties" element={<CustomerLayout><Specialties /></CustomerLayout>} />
         <Route path="/services/details/:id" element={<CustomerLayout><ServicesDetails /></CustomerLayout>} />
-        <Route path="/urgent" element={<CustomerLayout><Urgent /></CustomerLayout>} />
-        <Route path="/specialty" element={<CustomerLayout><Specialty /></CustomerLayout>} />
+        <Route path="/specialties/details/:id" element={<CustomerLayout><SpecialtiesDetails /></CustomerLayout>} />
         <Route path="/doctors" element={<CustomerLayout><Doctors /></CustomerLayout>} />
         <Route path="/booking" element={<CustomerLayout><Booking /></CustomerLayout>} />
         <Route path="/about" element={<CustomerLayout><AboutUs /></CustomerLayout>} />

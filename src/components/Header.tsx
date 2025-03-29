@@ -99,13 +99,10 @@ const Header = () => {
                                                     <Link to="/">Trang Chủ</Link>
                                                 </li>
                                                 <li className={location.pathname.startsWith("/specialties") || location.pathname.startsWith("/doctors") || location.pathname.startsWith("/admin/doctormanagement") ? "active" : ""}>
-                                                    <Link to="/specialties">
-                                                        Chuyên Khoa <i className="icofont-rounded-down"></i>
+                                                    <Link to="/doctors">
+                                                        Bác Sĩ <i className="icofont-rounded-down"></i>
                                                     </Link>
                                                     <ul className="dropdown">
-                                                        <li>
-                                                            <Link to="/doctors">Bác Sĩ</Link>
-                                                        </li>
                                                         {localStorage.getItem("tokenpkdkdh") && (
                                                             <li>
                                                                 <Link to="/admin/doctormanagement">Thêm Bác Sĩ</Link>
@@ -132,7 +129,13 @@ const Header = () => {
                                                     </ul>
                                                 </li>
                                                 <li className={location.pathname === "/contact" ? "active" : ""}>
-                                                    <Link to="/contact">Liên Hệ</Link>
+                                                    <Link to="/about">Giới Thiệu</Link>
+                                                    <i className="icofont-rounded-down"></i>
+                                                    <ul className="dropdown">
+                                                        <li>
+                                                            <Link to="/contact">Liên Hệ</Link>
+                                                        </li>
+                                                    </ul>
                                                 </li>
                                             </ul>
                                         </nav>

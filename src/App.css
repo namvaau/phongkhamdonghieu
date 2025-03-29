@@ -277,12 +277,14 @@ Start Header CSS
 }
 
 .table-responsive {
-  overflow-x: auto; /* Cho phép cuộn ngang */
+  overflow-x: auto;
+  /* Cho phép cuộn ngang */
   max-width: 100%;
 }
 
 .table-responsive .ant-table {
-  min-width: 600px; /* Đảm bảo bảng có thể cuộn */
+  min-width: 600px;
+  /* Đảm bảo bảng có thể cuộn */
 }
 
 
@@ -844,74 +846,38 @@ End Header CSS
 Start Hero Area CSS
 =============================*/
 .slider .single-slider {
-  height: 600px;
-  background-size: cover;
+  height: 500px;
+  background-size: contain;
+  /* Hiển thị toàn bộ ảnh */
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* Ngăn hiệu ứng mờ bị tràn ra ngoài */
 }
 
+/* Hiệu ứng mở rộng màu hai bên */
 .single-slider::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
-  /* Chiếm 40% bên trái */
+  width: 100%;
   height: 100%;
-  /* background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)); */
-}
-
-.slider .single-slider .text {
-  margin-top: 120px;
-}
-
-.slider.index2 .single-slider .text {
-  margin-top: 150px;
-}
-
-.slider .single-slider h1 {
-  color: #fff;
-  font-size: 38px;
-  font-weight: 700;
-  margin: 0;
-  padding: 0;
-  line-height: 42px;
-}
-
-.slider .single-slider h1 span {
-  color: #02a25c;
-}
-
-.slider .single-slider p {
-  color: #fff;
-  margin-top: 27px;
-  font-weight: 400;
-}
-
-.slider .single-slider .button {
-  margin-top: 30px;
-}
-
-.slider .single-slider .btn {
-  color: #fff;
-  background: #02a25c;
-  font-weight: 500;
-  display: inline-block;
-  margin: 0;
-  margin-right: 10px;
-}
-
-.slider .single-slider .btn:last-child {
-  margin: 0;
-}
-
-.slider .single-slider .btn.primary {
-  background: #06332e;
-  color: #fff;
-}
-
-.slider .single-slider .btn.primary:before {
-  background: #02a25c;
+  background-image: inherit;
+  /* Dùng lại ảnh nền */
+  background-size: cover;
+  /* Mở rộng ảnh */
+  background-position: center;
+  filter: blur(20px);
+  /* Làm mờ ảnh */
+  transform: scaleX(1.2);
+  /* Kéo giãn hai bên để tràn màu */
+  z-index: -1;
+  /* Đặt phía sau ảnh chính */
 }
 
 .slider .owl-carousel .owl-nav {
@@ -1359,20 +1325,24 @@ Why choose CSS
 
 .image-container {
   width: 100%;
-  /* Kích thước cố định */
-  height: 350px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Căn giữa ngang */
+  justify-content: center;
+  /* Căn giữa dọc */
   /* Nếu muốn góc bo tròn */
+}
+
+.specical-pf .image-container {
+  height: 300px;
 }
 
 .news-head {
   width: 100%;
-  height: 350px;
-  /* Cố định chiều cao ảnh */
+  height: 250px;
   overflow: hidden;
 }
 
@@ -1385,7 +1355,7 @@ Why choose CSS
 .portfolio-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   /* Cắt ảnh để vừa khung mà không méo */
 }
 
@@ -1416,7 +1386,6 @@ Why choose CSS
 .why-choose .choose-right {
   height: 100%;
   width: 100%;
-  background-image: url('./assets/img/blog-sidebar3.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1424,7 +1393,7 @@ Why choose CSS
 }
 
 .why-choose .active {
-  background-image: url('./assets/img/blog2.jpg');
+  background-image: url('./assets/img/blog1.jpg');
 }
 
 .why-choose .choose-right .video {
@@ -1572,6 +1541,11 @@ Start Portfolio CSS
 .portfolio .single-pf img {
   height: 100%;
   width: 100%;
+}
+
+.portfolio .specical-pf img {
+  height: 50% !important;
+  width: 50% !important;
 }
 
 .portfolio .single-pf:before {
@@ -2925,6 +2899,10 @@ Start Blog CSS
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.news-single .speciality-head img {
+  object-fit: contain;
 }
 
 .news-single .news-title {
@@ -5384,6 +5362,55 @@ End Footer CSS
 }
 
 .swiper-pagination-bullet-active {
-  background: #02a25c !important; /* Màu khi active */
+  background: #02a25c !important;
+  /* Màu khi active */
+  opacity: 1;
+}
+
+.container-team {
+  position: relative;
+}
+
+.container-team::before {
+  position: absolute;
+  content: '';
+  background: var(--bs-light);
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  clip-path: polygon(0 70%, 100% 30%, 100% 100%, 0% 100%);
+  z-index: -1;
+}
+
+.team-item {
+  background: var(--bs-white);
+  box-shadow: 0 0 45px rgba(0, 0, 0, .05);
+}
+
+.team-item .team-social {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  transition: .5s;
+  background: var(--bs-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-item:hover .team-social {
+  width: 100%;
+  left: 0;
+}
+
+.team-item .team-social .btn {
+  opacity: 0;
+  transition: .5s;
+}
+
+.team-item:hover .team-social .btn {
   opacity: 1;
 }

@@ -1,5 +1,5 @@
 import Breadcrumbs from "../../components/Breadcrumbs";
-import logo from '../../assets/img/author1.jpg'
+import logo from '../../assets/img/logo.png'
 import { useState } from "react";
 import { Link } from "react-router-dom";
 const Video = () => {
@@ -54,7 +54,7 @@ const Video = () => {
                                                 <span className="author">
                                                     <a href="#">
                                                         <img src={logo} alt="#" />
-                                                        Nguyễn Quang Hoài Nam
+                                                        PKĐK Đông Hiếu
                                                     </a>
                                                 </span>
                                                 <span className="date">

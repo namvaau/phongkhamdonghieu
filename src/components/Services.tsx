@@ -1,5 +1,6 @@
 
 import section from '../assets/img/section-img.png'
+// import demo from '../assets/img/1.png'
 const Services = () => {
     return (
         <>
@@ -18,6 +19,7 @@ const Services = () => {
                     </div>
                     <div className="row">
                         <div className="col-lg-4 col-md-6 col-12">
+                            {/* <img src={demo} alt="" /> */}
                             <div className="single-service">
                                 <i className="icofont icofont-ui-home" />
                                 <h4>

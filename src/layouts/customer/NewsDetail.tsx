@@ -1,5 +1,5 @@
 import Breadcrumbs from '../../components/Breadcrumbs'
-import author from '../../assets/img/author1.jpg'
+import author from '../../assets/img/logo.png'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { BASE_URL, type News, type NewsDetail } from '../../interface/InterfaceData'
 import { useEffect, useState } from 'react'
@@ -67,7 +67,7 @@ const NewsDetail = () => {
                                                 <span className="author">
                                                     <a href="#">
                                                         <img src={author} alt="#" />
-                                                        Nguyễn Quang Hoài Nam
+                                                        PKĐK Đông Hiếu
                                                     </a>
                                                 </span>
                                                 <span className="date">
@@ -198,7 +198,7 @@ const NewsDetail = () => {
                                 {/* Single Widget */}
                                 {/*/ End Single Widget */}
                                 {/* Single Widget */}
-                                <div className="single-widget side-tags">
+                                {/* <div className="single-widget side-tags">
                                     <h3 className="title">Tags</h3>
                                     <ul className="tag">
                                         <li>
@@ -223,7 +223,7 @@ const NewsDetail = () => {
                                             <a href="#">Ecommerce</a>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> */}
                                 {/*/ End Single Widget */}
                             </div>
                         </div>
