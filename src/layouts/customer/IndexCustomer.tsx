@@ -1,17 +1,18 @@
 import Slider from '../../components/Slider'
-import Schedule from '../../components/Schedule'
-import Feautes from '../../components/Feautes'
-import WhyChoose from '../../components/WhyChoose'
-import Call from '../../components/Call'
-import Portfolio from '../../components/Portfolio'
-import Appointment from '../../components/Appointment'
+import ThongTinDauTrang from '../../components/ThongTinDauTrang'
+import NguyenTac from '../../components/NguyenTac'
+import GioiThieu from '../../components/GioiThieu'
+import Hotline from '../../components/Hotline'
+import ChuyenKhoa from '../../components/ChuyenKhoa'
+import DatLich from '../../components/DatLich'
 
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import HotNews from '../../components/HotNews'
-import Facts from '../../components/Facts'
-import Services from '../../components/Services'
-import Device from '../../components/Device'
+import TinMoi from '../../components/TinMoi'
+import QuayTiepDon from '../../components/QuayTiepDon'
+import ThietBi from '../../components/ThietBi'
+import ContactIcons from '../../components/ContactIcons'
+import Input from '../../components/Input'
 
 const IndexCustomer = () => {
     const [isActive, setIsActive] = useState(false);
@@ -21,21 +22,22 @@ const IndexCustomer = () => {
     };
     return (
         <>
+            <ContactIcons />
             <ul className={`pro-features ${isActive ? "active" : ""}`}>
                 <a className="get-pro" onClick={handleGetProClick}>
-                    Liên Hệ
+                    Tìm kiếm
                 </a>
-                <li className="big-title">Phòng Khám Đa Khoa Đông Hiếu</li>
-                <li className="title">Website đang trong quá trình phát triển</li>
+                <li className="big-title">Phòng Khám Đa Khoa <br /> Đông Hiếu</li>
+                <Input/>
                 <div className="button">
                     <Link
-                        to={'/news'}
+                        to={'/tin-tuc'}
                         className="btn"
                     >
                         Xem Tin Tức
                     </Link>
                     <Link
-                        to={'/contact'}
+                        to={'/lien-he'}
                         className="btn"
                     >
                         Liên hệ
@@ -44,17 +46,17 @@ const IndexCustomer = () => {
             </ul>
 
             <Slider />
-            <Schedule />
-            <Feautes />
-            <WhyChoose />
-            <Portfolio />
+            <ThongTinDauTrang />
+            <NguyenTac />
+            <GioiThieu />
+            <ChuyenKhoa />
             {/* <DoctorUs/> */}
-            <Services/>
-            <Device/>
-            <Call />
-            <HotNews />
-            <Facts />
-            <Appointment />
+            <QuayTiepDon />
+            <ThietBi />
+            <Hotline />
+            <TinMoi />
+            {/* <ThongTin /> */}
+            <DatLich />
         </>
     )
 }

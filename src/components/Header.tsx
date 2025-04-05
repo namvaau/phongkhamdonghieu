@@ -24,7 +24,7 @@ const Header = () => {
                         <div className="row">
                             <div className="col-lg-6 col-md-5 col-12">
                                 <ul className="top-link">
-                                    <li><Link to="/contact"><i className="icofont-location-pin"></i>Ngã tư đường mòn HCM, Xã Đông Hiếu, Thị Xã Thái Hòa, Tỉnh Nghệ An.</Link></li>
+                                    <li><Link to="/lien-he"><i className="icofont-location-pin"></i>Ngã tư đường mòn HCM, Xã Đông Hiếu, Thị Xã Thái Hòa, Tỉnh Nghệ An.</Link></li>
                                 </ul>
                             </div>
                             <div className="col-lg-6 col-md-7 col-12">
@@ -78,15 +78,15 @@ const Header = () => {
                                         <button className="close-btn" onClick={() => setIsOpen(false)}>✖</button>
                                         <ul>
                                             <li><Link to="/" onClick={() => setIsOpen(false)}>Trang Chủ</Link></li>
-                                            <li><Link to="/doctors" onClick={() => setIsOpen(false)}>Bác Sĩ</Link></li>
-                                            <li><Link to="/specialties" onClick={() => setIsOpen(false)}>Chuyên Khoa</Link></li>
-                                            <li><Link to="/services" onClick={() => setIsOpen(false)}>Dịch Vụ</Link></li>
-                                            <li><Link to="/news" onClick={() => setIsOpen(false)}>Tin Tức</Link></li>
+                                            <li><Link to="/bac-sy" onClick={() => setIsOpen(false)}>Bác Sĩ</Link></li>
+                                            <li><Link to="/chuyen-khoa" onClick={() => setIsOpen(false)}>Chuyên Khoa</Link></li>
+                                            <li><Link to="/dich-vu" onClick={() => setIsOpen(false)}>Dịch Vụ</Link></li>
+                                            <li><Link to="/tin-tuc" onClick={() => setIsOpen(false)}>Tin Tức</Link></li>
                                             {localStorage.getItem("tokenpkdkdh") && (
                                                 <li><Link to="/admin/newsmanagement" onClick={() => setIsOpen(false)}>Đăng Bài</Link></li>
                                             )}
                                             <li><Link to="/video" onClick={() => setIsOpen(false)}>Video</Link></li>
-                                            <li><Link to="/contact" onClick={() => setIsOpen(false)}>Liên Hệ</Link></li>
+                                            <li><Link to="/lien-he" onClick={() => setIsOpen(false)}>Liên Hệ</Link></li>
                                         </ul>
                                     </div>
                                 )}
@@ -98,11 +98,16 @@ const Header = () => {
                                                 <li className={location.pathname === "/" ? "active" : ""}>
                                                     <Link to="/">Trang Chủ</Link>
                                                 </li>
-                                                <li className={location.pathname.startsWith("/specialties") || location.pathname.startsWith("/doctors") || location.pathname.startsWith("/admin/doctormanagement") ? "active" : ""}>
-                                                    <Link to="/doctors">
+                                                <li className={location.pathname.startsWith("/chuyen-khoa") || location.pathname.startsWith("/bac-sy") || location.pathname.startsWith("/admin/doctormanagement") ? "active" : ""}>
+                                                    <Link to="/bac-sy">
                                                         Bác Sĩ <i className="icofont-rounded-down"></i>
                                                     </Link>
                                                     <ul className="dropdown">
+                                                        <li>
+                                                            <Link to="/chuyen-khoa">
+                                                                Chuyên Khoa
+                                                            </Link>
+                                                        </li>
                                                         {localStorage.getItem("tokenpkdkdh") && (
                                                             <li>
                                                                 <Link to="/admin/doctormanagement">Thêm Bác Sĩ</Link>
@@ -110,11 +115,11 @@ const Header = () => {
                                                         )}
                                                     </ul>
                                                 </li>
-                                                <li className={location.pathname === "/services" ? "active" : ""}>
-                                                    <Link to="/services">Dịch Vụ</Link>
+                                                <li className={location.pathname === "/dich-vu" ? "active" : ""}>
+                                                    <Link to="/dich-vu">Dịch Vụ</Link>
                                                 </li>
-                                                <li className={location.pathname.startsWith("/news") || location.pathname.startsWith("/admin/newsmanagement") || location.pathname.startsWith("/video") ? "active" : ""}>
-                                                    <Link to="/news">
+                                                <li className={location.pathname.startsWith("/tin-tuc") || location.pathname.startsWith("/admin/newsmanagement") || location.pathname.startsWith("/video") ? "active" : ""}>
+                                                    <Link to="/tin-tuc">
                                                         Tin Tức <i className="icofont-rounded-down"></i>
                                                     </Link>
                                                     <ul className="dropdown">
@@ -128,12 +133,12 @@ const Header = () => {
                                                         )}
                                                     </ul>
                                                 </li>
-                                                <li className={location.pathname === "/contact" ? "active" : ""}>
-                                                    <Link to="/about">Giới Thiệu</Link>
+                                                <li className={location.pathname === "/lien-he" ? "active" : ""}>
+                                                    <Link to="/ve-chung-toi">Giới Thiệu</Link>
                                                     <i className="icofont-rounded-down"></i>
                                                     <ul className="dropdown">
                                                         <li>
-                                                            <Link to="/contact">Liên Hệ</Link>
+                                                            <Link to="/lien-he">Liên Hệ</Link>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -144,7 +149,7 @@ const Header = () => {
 
                                 <div className="col-lg-2 col-12">
                                     <div className="get-quote">
-                                        <Link to="/booking" className="btn">Đặt Lịch Hẹn</Link>
+                                        <Link to="/dat-lich" className="btn">Đặt Lịch Hẹn</Link>
                                     </div>
                                 </div>
                             </div>

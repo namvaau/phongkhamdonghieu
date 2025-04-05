@@ -947,7 +947,7 @@ Start Schedule CSS
 
 .schedule .schedule-inner {
   position: relative;
-  transform: translateY(-50%);
+  transform: translateY(-30%);
   z-index: 9;
 }
 
@@ -1393,7 +1393,7 @@ Why choose CSS
 }
 
 .why-choose .active {
-  background-image: url('./assets/img/blog1.jpg');
+  background-image: url('./assets/img/27.jpg');
 }
 
 .why-choose .choose-right .video {
@@ -2990,7 +2990,6 @@ Start Blog CSS
 }
 
 .news-single .news-text p {
-  font-size: 14px;
   margin-bottom: 20px;
 }
 
@@ -3027,7 +3026,6 @@ Start Blog CSS
   color: #fff;
   margin: 0;
   line-height: 26px;
-  font-size: 15px;
   position: relative;
 }
 

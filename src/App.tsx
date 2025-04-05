@@ -4,22 +4,23 @@ import Header from './components/Header';
 import IndexCustomer from './layouts/customer/IndexCustomer';
 import Footer from './components/Footer';
 import NotFound404 from './layouts/NotFound404';
-import ContactUs from './layouts/customer/ContactUs';
-import ServicesDetails from './layouts/customer/ServicesDetails';
-import Services from './layouts/customer/Services';
-import Doctors from './layouts/customer/Doctors';
-import Booking from './layouts/customer/Booking';
-import AboutUs from './layouts/customer/AboutUs';
-import Specialties from './layouts/customer/Specialties';
-import NewsDetail from './layouts/customer/NewsDetail';
-import News from './layouts/customer/News';
 import ScrollToTop from './components/ScrollToTop';
 import Video from './layouts/customer/Video';
 import NewsForm from './layouts/admin/NewsForm';
 import Login from './layouts/admin/Login';
 import ProtectedRoute from './layouts/admin/ProtectedRoute';
 import DoctorManagement from './layouts/admin/DoctorsForm';
-import SpecialtiesDetails from './layouts/customer/SpecialtiesDetails';
+import LienHe from './layouts/customer/LienHe';
+import CacTinTuc from './layouts/customer/CacTinTuc';
+import TinTucChiTiet from './layouts/customer/TinTucChiTiet';
+import CacDichVu from './layouts/customer/CacDichVu';
+import CacChuyenKhoa from './layouts/customer/CacChuyenKhoa';
+import DichVuChiTiet from './layouts/customer/DichVuChiTiet';
+import ChuyenKhoaChiTiet from './layouts/customer/ChuyenKhoaChiTiet';
+import CacBacSy from './layouts/customer/CacBacSy';
+import DatLichHen from './layouts/customer/DatLichHen';
+import VeChungToi from './layouts/customer/VeChungToi';
+import KhamBenhBHYT from './layouts/customer/KhamBenhBHYT';
 
 const CustomerLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
@@ -38,17 +39,18 @@ const App: React.FC = () => {
       <Routes>
         {/* Customer Routes */}
         <Route path="/" element={<CustomerLayout><IndexCustomer /></CustomerLayout>} />
-        <Route path="/contact" element={<CustomerLayout><ContactUs /></CustomerLayout>} />
-        <Route path="/news" element={<CustomerLayout><News /></CustomerLayout>} />
-        <Route path="/news/details/:id" element={<CustomerLayout><NewsDetail /></CustomerLayout>} />
-        <Route path="/services" element={<CustomerLayout><Services /></CustomerLayout>} />
-        <Route path="/specialties" element={<CustomerLayout><Specialties /></CustomerLayout>} />
-        <Route path="/services/details/:id" element={<CustomerLayout><ServicesDetails /></CustomerLayout>} />
-        <Route path="/specialties/details/:id" element={<CustomerLayout><SpecialtiesDetails /></CustomerLayout>} />
-        <Route path="/doctors" element={<CustomerLayout><Doctors /></CustomerLayout>} />
-        <Route path="/booking" element={<CustomerLayout><Booking /></CustomerLayout>} />
-        <Route path="/about" element={<CustomerLayout><AboutUs /></CustomerLayout>} />
+        <Route path="/lien-he" element={<CustomerLayout><LienHe /></CustomerLayout>} />
+        <Route path="/tin-tuc" element={<CustomerLayout><CacTinTuc /></CustomerLayout>} />
+        <Route path="/tin-tuc/chi-tiet/:id" element={<CustomerLayout><TinTucChiTiet /></CustomerLayout>} />
+        <Route path="/dich-vu" element={<CustomerLayout><CacDichVu /></CustomerLayout>} />
+        <Route path="/chuyen-khoa" element={<CustomerLayout><CacChuyenKhoa /></CustomerLayout>} />
+        <Route path="/dich-vu/chi-tiet/:id" element={<CustomerLayout><DichVuChiTiet /></CustomerLayout>} />
+        <Route path="/chuyen-khoa/chi-tiet/:id" element={<CustomerLayout><ChuyenKhoaChiTiet /></CustomerLayout>} />
+        <Route path="/bac-sy" element={<CustomerLayout><CacBacSy /></CustomerLayout>} />
+        <Route path="/dat-lich" element={<CustomerLayout><DatLichHen /></CustomerLayout>} />
+        <Route path="/ve-chung-toi" element={<CustomerLayout><VeChungToi /></CustomerLayout>} />
         <Route path="/video" element={<CustomerLayout><Video /></CustomerLayout>} />
+        <Route path="/kham-benh-bhyt" element={<CustomerLayout><KhamBenhBHYT /></CustomerLayout>} />
 
 
         <Route

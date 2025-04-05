@@ -62,44 +62,44 @@ const Footer = () => {
                                         <div className="col-lg-6 col-md-6 col-12">
                                             <ul>
                                                 <li>
-                                                    <a href="#">
+                                                    <Link to="/">
                                                         <i className="fa fa-caret-right" aria-hidden="true" />
                                                         Trang Chủ
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#">
+                                                    <Link to="/bac-sy">
                                                         <i className="fa fa-caret-right" aria-hidden="true" />
                                                         Bác Sĩ
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#">
+                                                    <Link to="/dich-vu">
                                                         <i className="fa fa-caret-right" aria-hidden="true" />
                                                         Dịch Vụ
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#">
+                                                    <Link to="/ve-chung-toi">
                                                         <i className="fa fa-caret-right" aria-hidden="true" />
                                                         Về Chúng Tôi
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </div>
                                         <div className="col-lg-6 col-md-6 col-12">
                                             <ul>
                                                 <li>
-                                                    <a href="#">
+                                                    <Link to="/chuyen-khoa">
                                                         <i className="fa fa-caret-right" aria-hidden="true" />
-                                                        Tuyển Dụng
-                                                    </a>
+                                                        Chuyên Khoa
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#">
+                                                    <Link to="/tin-tuc">
                                                         <i className="fa fa-caret-right" aria-hidden="true" />
                                                         Tin Tức
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
                                                     <a href="#">
@@ -108,10 +108,10 @@ const Footer = () => {
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">
+                                                    <Link to="/lien-he">
                                                         <i className="fa fa-caret-right" aria-hidden="true" />
                                                         Liên Hệ
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </div>

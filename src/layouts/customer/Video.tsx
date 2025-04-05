@@ -19,6 +19,11 @@ const Video = () => {
             title: "CHUYÊN GIA GIẢI ĐÁP VỀ BỆNH SỞI",
             url: "https://www.youtube.com/embed/P5PfWd1D6TI?si=2yyh6tgO4_XycQ9C",
         },
+        {
+            id: 4,
+            title: "LỄ KÝ KẾT HỢP TÁC CHIẾN LƯỢC - BỆNH VIỆN HOÀN MỸ VINH & PHÒNG KHÁM ĐA KHOA ĐÔNG HIẾU",
+            url: "https://www.youtube.com/embed/xRQxMpecJwk?si=FunZOUavji5mE700",
+        },
     ];
     const [currentVideo, setCurrentVideo] = useState(videos[0]);
     const getYoutubeThumbnail = (url: string) => {

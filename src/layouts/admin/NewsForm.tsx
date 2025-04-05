@@ -238,13 +238,13 @@ const NewsForm = () => {
                                     {sortedNews
                                         .filter((news) => news.id)
                                         .slice(0, 3).map((item) => (
-                                            <div style={{ cursor: 'pointer' }} className="single-post" key={item.id} onClick={() => navigate(`/news/details/${item.id}`, { state: { news: news } })}>
+                                            <div style={{ cursor: 'pointer' }} className="single-post" key={item.id} onClick={() => navigate(`/tin-tuc/chi-tiet/${item.id}`, { state: { news: news } })}>
                                                 <div className="image">
                                                     <img src={item.imageUrl} alt="#" />
                                                 </div>
                                                 <div className="content">
                                                     <h5>
-                                                        <a onClick={() => navigate(`/news/details/${item.id}`, { state: { news: news } })}>{item.title}</a>
+                                                        <a onClick={() => navigate(`/tin-tuc/chi-tiet/${item.id}`, { state: { news: news } })}>{item.title}</a>
                                                     </h5>
                                                     <ul className="comment">
                                                         <li>
