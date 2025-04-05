@@ -11,7 +11,6 @@ import { Link } from 'react-router-dom'
 import TinMoi from '../../components/TinMoi'
 import QuayTiepDon from '../../components/QuayTiepDon'
 import ThietBi from '../../components/ThietBi'
-import ContactIcons from '../../components/ContactIcons'
 import Input from '../../components/Input'
 
 const IndexCustomer = () => {
@@ -22,7 +21,6 @@ const IndexCustomer = () => {
     };
     return (
         <>
-            <ContactIcons />
             <ul className={`pro-features ${isActive ? "active" : ""}`}>
                 <a className="get-pro" onClick={handleGetProClick}>
                     Tìm kiếm
