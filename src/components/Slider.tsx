@@ -2,21 +2,17 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import 'swiper/css';
 
-import banner1 from '../assets/img/slider.jpg';
-import banner2 from '../assets/img/slider2.jpg';
-import banner4 from '../assets/img/slider3.jpg';
+import banner2 from '../assets/img/thaydoi.png';
 import banner3 from '../assets/img/slider1.jpg';
 import banner5 from '../assets/img/slider4.jpg';
 import banner6 from '../assets/img/slider5.jpg';
 
 const Slider = () => {
     const slides = [
+        { id: 4, img: banner2, title: "Ngày Thầy Thuốc Việt Nam 27/2/2025", btnText: "Xem Chi Tiết" },
         { id: 6, img: banner6, title: "Ngày Thầy Thuốc Việt Nam 27/2/2025", btnText: "Xem Chi Tiết" },
         { id: 1, img: banner5, title: "Ngày Thầy Thuốc Việt Nam 27/2/2025", btnText: "Xem Chi Tiết" },
         { id: 2, img: banner3, title: "Ngày Thầy Thuốc Việt Nam 27/2/2025", btnText: "Xem Chi Tiết" },
-        { id: 3, img: banner1, title: "Ngày Thầy Thuốc Việt Nam 27/2/2025", btnText: "Xem Chi Tiết" },
-        { id: 4, img: banner2, title: "Ngày Thầy Thuốc Việt Nam 27/2/2025", btnText: "Xem Chi Tiết" },
-        { id: 5, img: banner4, title: "Ngày Thầy Thuốc Việt Nam 27/2/2025", btnText: "Xem Chi Tiết" },
     ];
 
     return (

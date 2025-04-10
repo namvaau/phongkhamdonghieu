@@ -1377,6 +1377,11 @@ Version:	1.1
 		margin-bottom: 10px;
 	}
 
+	.container__search__form {
+		width: 300px;
+		margin: 0 auto;
+	}
+
 	.name-mobile {
 		font-size: 15px !important;
 	}

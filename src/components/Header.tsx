@@ -124,6 +124,9 @@ const Header = () => {
                                                     </Link>
                                                     <ul className="dropdown">
                                                         <li>
+                                                            <Link to="/video">Hoạt động phòng khám</Link>
+                                                        </li>
+                                                        <li>
                                                             <Link to="/video">Video</Link>
                                                         </li>
                                                         {localStorage.getItem("tokenpkdkdh") && (

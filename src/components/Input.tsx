@@ -48,7 +48,6 @@ const StyledWrapper = styled.div`
   /* styling of whole input container */
   .form {
     --timing: 0.3s;
-    --width-of-input: 200px;
     --height-of-input: 40px;
     --border-height: 2px;
     --input-bg: #fff;
