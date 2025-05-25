@@ -142,7 +142,7 @@ const Video = () => {
                                     <h3 className="title">Danh Mục</h3>
                                     <ul className="categor-list">
                                         <li>
-                                            <Link to={'/news'}>Tin Tức</Link>
+                                            <Link to={'/tin-tuc'}>Tin Tức</Link>
                                         </li>
                                     </ul>
                                 </div>

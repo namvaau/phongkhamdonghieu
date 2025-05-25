@@ -14,7 +14,7 @@ const QuayTiepDon = () => {
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="section-title">
-                                <h2>Các Dịch Vụ Tại Phòng Khám Đông Hiếu</h2>
+                                <h2>Các Dịch Vụ Tại <br /> Phòng Khám Đa khoa Đông Hiếu</h2>
                                 <img src={section} alt="Dịch vụ y tế" />
                                 <p>
                                     Chúng tôi cung cấp các dịch vụ y tế chất lượng, đáp ứng nhu cầu chăm sóc sức khỏe của bạn và gia đình.

@@ -21,6 +21,8 @@ import CacBacSy from './layouts/customer/CacBacSy';
 import DatLichHen from './layouts/customer/DatLichHen';
 import VeChungToi from './layouts/customer/VeChungToi';
 import KhamBenhBHYT from './layouts/customer/KhamBenhBHYT';
+import AI from './layouts/customer/AI';
+import DienThoai from './components/DienThoai';
 
 const CustomerLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
@@ -28,6 +30,16 @@ const CustomerLayout: React.FC<{ children: React.ReactNode }> = ({ children }) =
       <Header />
       <div>{children}</div>
       <Footer />
+      <DienThoai/>
+    </>
+  );
+};
+
+const CustomerAILayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return (
+    <>
+      <Header />
+      <div>{children}</div>
     </>
   );
 };
@@ -51,6 +63,7 @@ const App: React.FC = () => {
         <Route path="/ve-chung-toi" element={<CustomerLayout><VeChungToi /></CustomerLayout>} />
         <Route path="/video" element={<CustomerLayout><Video /></CustomerLayout>} />
         <Route path="/kham-benh-bhyt" element={<CustomerLayout><KhamBenhBHYT /></CustomerLayout>} />
+        <Route path="/hoi-dap-ai" element={<CustomerAILayout><AI /></CustomerAILayout>} />
 
 
         <Route

@@ -20,7 +20,7 @@ const ThongTinDauTrang = () => {
                                             <h4>Giờ Làm Việc</h4>
                                             <ul className="time-sidual">
                                                 <li className="day">
-                                                    Thứ Hai - Chủ Nhật (Sáng) <span>6:30 - 11:00</span>
+                                                    Thứ Hai - Chủ Nhật (Sáng) <span>6:45 - 11:15</span>
                                                 </li>
                                                 <li className="day">
                                                     Thứ Hai - Chủ Nhật (Chiều) <span>14:00 - 17:30</span>
@@ -52,7 +52,7 @@ const ThongTinDauTrang = () => {
                                             <span>Phòng Khám Đa Khoa Đông Hiếu</span>
                                             <h4>Chuyên Khoa</h4>
                                             <p>
-                                                Sở hữu không gian khám chữa bệnh văn minh, sang trọng, hiện đại, hỗ trợ hiệu quả cho việc chẩn đoán và điều trị.
+                                                Sở hữu không gian khám chữa bệnh văn minh, hiện đại, hỗ trợ hiệu quả cho việc chẩn đoán và điều trị.
                                             </p>
                                             <Link to="/chuyen-khoa">XEM CHI TIẾT</Link>
                                             <i className="fa fa-long-arrow-right" style={{ color: '#fff', marginLeft: '5px' }} />

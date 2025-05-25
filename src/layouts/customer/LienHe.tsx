@@ -84,7 +84,7 @@ const LienHe = () => {
                                 <div className="single-info">
                                     <i className="icofont-google-map" />
                                     <div className="content">
-                                        <h3 style={{fontSize: '14px'}}>Phòng Khám Đông Hiếu</h3>
+                                        <h3 style={{fontSize: '14px'}}>Phòng khám Đa khoa Đông Hiếu</h3>
                                         <p  style={{fontSize: '12px'}}>Thái Hòa, Nghệ An, Việt Nam</p>
                                     </div>
                                 </div>
@@ -93,7 +93,7 @@ const LienHe = () => {
                                 <div className="single-info">
                                     <i className="icofont icofont-wall-clock" />
                                     <div className="content">
-                                        <h3 style={{fontSize: '14px'}}>Thứ 2 - Chủ Nhật: 7h - 17h</h3>
+                                        <h3 style={{fontSize: '14px'}}>Thứ 2 - Chủ Nhật: <br /> Sáng: 6h46 - 11h15 <br /> Chiều: 14h - 17h30</h3>
                                     </div>
                                 </div>
                             </div>
