@@ -23,6 +23,7 @@ import VeChungToi from './layouts/customer/VeChungToi';
 import KhamBenhBHYT from './layouts/customer/KhamBenhBHYT';
 import AI from './layouts/customer/AI';
 import DienThoai from './components/DienThoai';
+import SendSms from './layouts/customer/SendSms';
 
 const CustomerLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
@@ -82,6 +83,16 @@ const App: React.FC = () => {
             <ProtectedRoute>
               <CustomerLayout>
                 <DoctorManagement />
+              </CustomerLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/gui-lich-hen"
+          element={
+            <ProtectedRoute>
+              <CustomerLayout>
+                <SendSms />
               </CustomerLayout>
             </ProtectedRoute>
           }

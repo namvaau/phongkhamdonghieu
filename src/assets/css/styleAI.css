@@ -103,17 +103,6 @@ body.hide-header .header-ai {
   scrollbar-color: #999 transparent;
 }
 
-.chat-list .message.incoming {
-  margin-top: 1.5rem;
-}
-
-.chat-list .message .message-content {
-  display: flex;
-  gap: 1.5rem;
-  width: 100%;
-  align-items: center;
-}
-
 .chat-list .message .text {
   font-size: 16px;
   color: var(--text-color);
@@ -139,6 +128,43 @@ body.hide-header .header-ai {
 .chat-list .message.loading .avatar {
   animation: rotate 3s linear infinite;
 }
+
+
+/* Nội dung tin nhắn */
+.chat-list .message .message-content {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  max-width: 100%;
+}
+
+/* Bong bóng chat */
+.chat-list .message .text {
+  background-color: #f1f1f1;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  font-size: 16px;
+  white-space: pre-wrap;
+}
+
+.outgoing .message-content {
+  justify-content: end;
+}
+
+/* AI: màu xám */
+.chat-list .message.incoming .text {
+  background-color: #f1f1f1;
+}
+
+/* User: màu xanh lá */
+.chat-list .message.outgoing .text {
+  background-color: #d4f8c4;
+}
+
+.chat-list .message.incoming {
+  margin-top: 1.5rem;
+}
+
 
 @keyframes rotate {
   100% {

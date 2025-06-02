@@ -44,7 +44,7 @@ const TinMoi = () => {
                                 <h2>Tin Tức Nổi Bật</h2>
                                 <img src={section} alt="#" />
                                 <p>
-                                    Luôn cập nhật những thông tin y khoa quan trọng, kiến thức chăm sóc sức khỏe và các chương trình ưu đãi tại phòng khám Đông Hiếu.
+                                    Luôn cập nhật những thông tin y khoa quan trọng, kiến thức chăm sóc sức khỏe và các chương trình ưu đãi tại Phòng khám Đa khoa Đông Hiếu.
                                 </p>
                             </div>
                         </div>

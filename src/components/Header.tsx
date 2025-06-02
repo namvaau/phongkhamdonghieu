@@ -85,6 +85,9 @@ const Header = () => {
                                             {localStorage.getItem("tokenpkdkdh") && (
                                                 <li><Link to="/admin/newsmanagement" onClick={() => setIsOpen(false)}>Đăng Bài</Link></li>
                                             )}
+                                            {localStorage.getItem("tokenpkdkdh") && (
+                                                <li><Link to="/admin/gui-lich-hen" onClick={() => setIsOpen(false)}>Gửi Lịch Hẹn</Link></li>
+                                            )}
                                             <li><Link to="/video" onClick={() => setIsOpen(false)}>Video</Link></li>
                                             <li><Link to="/lien-he" onClick={() => setIsOpen(false)}>Liên Hệ</Link></li>
                                         </ul>
@@ -152,8 +155,13 @@ const Header = () => {
 
                                 <div className="col-lg-2 col-12">
                                     <div className="get-quote">
-                                        <Link to="/dat-lich" className="btn">Đặt Lịch Hẹn</Link>
+                                        {localStorage.getItem("tokenpkdkdh") ? (
+                                            <Link to="/admin/gui-lich-hen" className="btn">Tạo Lịch Hẹn</Link>
+                                        ) : (
+                                            <Link to="/dat-lich" className="btn">Đặt Lịch Hẹn</Link>
+                                        )}
                                     </div>
+
                                 </div>
                             </div>
                         </div>

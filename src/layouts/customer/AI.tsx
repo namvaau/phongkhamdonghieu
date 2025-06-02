@@ -3,7 +3,7 @@ import "../../assets/css/styleAI.css"
 import user from "../../assets/img/user.png"
 import pk from "../../assets/img/logo.png"
 
-const API_KEY = "AIzaSyAsig0uTdAc3Qo02EtN3xPbqrU9mGi3IOw";
+const API_KEY = "AIzaSyBfftg-kXWSu46jzQtc-n4mO--z8j0sYbY";
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
 
 interface Message {
@@ -182,18 +182,29 @@ export default function GeminiChatbot() {
             msg.type === "outgoing" ? `${user}` : `${pk}`;
         return (
             <div className={`message ${msg.type === "incoming-loading" ? "incoming loading" : msg.type}`}>
-                <div className="message-content">
-                    <img className="avatar" src={avatarSrc} alt={`${msg.type} avatar`} />
-                    <p className="text">{msg.content}</p>
-                    {msg.type === "incoming-loading" && (
-                        <div className="loading-indicator">
-                            <div className="loading-bar"></div>
-                            <div className="loading-bar"></div>
-                            <div className="loading-bar"></div>
-                        </div>
-                    )}
+                <div className={`message ${msg.type}`}>
+                    <div className={`message-content ${msg.type}`}>
+                        {(msg.type === "incoming" || msg.type === "incoming-loading") && (
+                            <img className="avatar" src={avatarSrc} alt="incoming avatar" />
+                        )}
+
+                        <p className="text">{msg.content}</p>
+
+                        {msg.type === "outgoing" && (
+                            <img className="avatar" src={avatarSrc} alt="outgoing avatar" />
+                        )}
+
+                        {msg.type === "incoming-loading" && (
+                            <div className="loading-indicator">
+                                <div className="loading-bar"></div>
+                                <div className="loading-bar"></div>
+                                <div className="loading-bar"></div>
+                            </div>
+                        )}
+                    </div>
                 </div>
-                {msg.type !== "incoming-loading" && (
+
+                {msg.type !== "incoming-loading" && msg.type === "incoming" && (
                     <span
                         onClick={() => copyMessage(msg.content, setCopied)}
                         className="icon material-symbols-rounded"
@@ -210,37 +221,37 @@ export default function GeminiChatbot() {
         <div className={themeLight ? "light_mode" : ""}>
             {(messages.length === 0) && (
                 <header className={`header-ai ${messages.length > 0 ? "hide-header" : ""}`}>
-                <h1 className="title">Phòng khám Đa khoa Đông Hiếu, <br />Xin chào!</h1>
-                <p className="subtitle">Chúng tôi có thể giúp gì cho bạn?</p>
+                    <h1 className="title">Phòng khám Đa khoa Đông Hiếu, <br />Xin chào!</h1>
+                    <p className="subtitle">Chúng tôi có thể giúp gì cho bạn?</p>
 
-                <ul className="suggestion-list">
-                    {suggestions.map((text, i) => (
-                        <li
-                            key={i}
-                            className="suggestion"
-                            onClick={() => {
-                                if (isResponseGenerating) return;
-                                setUserMessage(text);
-                                setTimeout(() => {
-                                    handleOutgoingChat();
-                                }, 50);
-                            }}
-                            style={{ cursor: isResponseGenerating ? "not-allowed" : "pointer" }}
-                        >
-                            <h6 className="text">{text}</h6>
-                            <span className="icon material-symbols-rounded">
-                                {i === 0
-                                    ? "draw"
-                                    : i === 1
-                                        ? "lightbulb"
-                                        : i === 2
-                                            ? "explore"
-                                            : "code"}
-                            </span>
-                        </li>
-                    ))}
-                </ul>
-            </header>)}
+                    <ul className="suggestion-list">
+                        {suggestions.map((text, i) => (
+                            <li
+                                key={i}
+                                className="suggestion"
+                                onClick={() => {
+                                    if (isResponseGenerating) return;
+                                    setUserMessage(text);
+                                    setTimeout(() => {
+                                        handleOutgoingChat();
+                                    }, 50);
+                                }}
+                                style={{ cursor: isResponseGenerating ? "not-allowed" : "pointer" }}
+                            >
+                                <h6 className="text">{text}</h6>
+                                <span className="icon material-symbols-rounded">
+                                    {i === 0
+                                        ? "draw"
+                                        : i === 1
+                                            ? "lightbulb"
+                                            : i === 2
+                                                ? "explore"
+                                                : "code"}
+                                </span>
+                            </li>
+                        ))}
+                    </ul>
+                </header>)}
 
             <div ref={chatContainerRef} className="chat-list">
                 {messages.map((msg) => (

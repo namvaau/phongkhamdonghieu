@@ -24,12 +24,12 @@ const IndexCustomer = () => {
         <>
             <Slider />
             <ThongTinDauTrang />
+            <div data-aos="fade-up"><TinMoi /></div>
             <div data-aos="fade-up"><NguyenTac /></div>
             <div data-aos="fade-up"><QuayTiepDon /></div>
             <div data-aos="fade-up"><ChuyenKhoa /></div>
             <div data-aos="fade-up"><ThietBi /></div>
             <div data-aos="fade-up"><Hotline /></div>
-            <div data-aos="fade-up"><TinMoi /></div>
             <div data-aos="fade-up"><DatLich /></div>
         </>
     )

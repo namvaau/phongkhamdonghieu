@@ -127,10 +127,10 @@ const Footer = () => {
                                     </p>
                                     <ul className="time-sidual">
                                         <li className="day">
-                                            Thứ 2 - Chủ Nhật (Sáng) <span>6.30-11.30</span>
+                                            Thứ 2 - Chủ Nhật (Sáng) <span>6.45-11.15</span>
                                         </li>
                                         <li className="day">
-                                            Thứ 2 - Chủ Nhật (Chiều) <span>13.30-17.30</span>
+                                            Thứ 2 - Chủ Nhật (Chiều) <span>14.00-17.30</span>
                                         </li>
                                     </ul>
                                 </div>
